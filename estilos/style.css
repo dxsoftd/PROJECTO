@@ -58,36 +58,47 @@ section {
 }
 
 h1 {
-    color: white;
+    color: var(--cor_escura);
+    text-shadow: 0px 0px 1px var(--cor_back2);
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 
 p {
     font-size: 0.8em;
+    text-align: justify;
+    padding: 0px 20px;
 }
 
 input {
+    border: none;
+}
+
+#ilogin, #isenha {
     display: block;
     border: none;
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    border-bottom: 1px solid var(--cor_escura);
 }
 
 label {
     display: none;
 }
 
-#ilogin, #isenha {
-
-    border-bottom: 1px solid var(--cor_escura);
-    margin-left: 20px;
-}
-
-input[type = 'submit']{
+input[type = 'submit'] {
     display: block;
     font-size: 1em;
+    color: var(--cor_escura);
     border-radius: 30px;
+    border: 1px solid var(--cor_escura);
     background-color: transparent;
+    width: 90%;
+    height: 35px;
+    margin: auto;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 input[type = submit]:hover {
@@ -105,8 +116,10 @@ a {
     text-decoration: none;
     text-align: center;
     color: white;
+    background-color: var(--cor_escura);
     margin: auto;
     border: 1px solid var(--cor_escura);
+    border-radius: 30px;
     cursor: pointer;
     margin-top: 10px;
 }
