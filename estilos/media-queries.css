@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    body {
+        background-image: linear-gradient(to bottom, var(--cor_clara), var(--cor_media));
+    }
+
+    section {
+        width: 80vw;
+    }
+
+    #parte_da_imagem {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    #parte_dos_formularios {
+        float: right;
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background-image: linear-gradient(to bottom, var(--cor_clara), var(--cor_media));
+    }
+
+    section {
+        width: 950px;
+    }
+
+    #parte_da_imagem {
+        float: right;
+        width: 40%;
+        height: 100%;
+    }
+
+    #parte_dos_formularios {
+        float: left;
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.1em;
+    }
+
+}
+
+/* 
+
+
+
+#img {
+    display: block;
+    background: black url('../../img/paisagem02.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+}
+
+#form {
+    display: block;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+form > input[type = submit] {
+    margin-top: 10px;
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor_clara);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type = submit]:hover {
+    background-color: var(--cor_escura);
+    color: var(--cor_clara);
+    transition-duration: 1s;
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor_escura);
+    border: 1px solid var(--cor_clara);
+    border-radius: 5px;
+    color: var(--cor_clara);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background-color: #F2B988;
+    color: var(--cor_escura);
+    transition-duration: 1s;
+}
+
+.campo {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+input {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid var(--cor_escura);
+}
+
+label  {
+    display: none;
+}
+
+.campo > i {
+    transform: translate(0px, 5px);
+}
+
+a.botao > i {
+    transform: translate(0px, 6px);
+}
+
+*/

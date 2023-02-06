@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.embassado > p{
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}

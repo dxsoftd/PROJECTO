@@ -1,0 +1,125 @@
+/* 1. CONFIGURAÇÃO PARA LOGIN */
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root{
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font1);
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--cor_clara), var(--cor_media));
+}
+
+
+section {
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.485);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: width .5s, height .5s;
+    transition-timing-function: ease;
+    transform: translate(-50%,-50%);
+}
+
+#parte_da_imagem  {
+    display: block;
+    background: black url('../img/paisagem02.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+input {
+    display: block;
+    border: none;
+}
+
+label {
+    display: none;
+}
+
+#ilogin, #isenha {
+
+    border-bottom: 1px solid var(--cor_escura);
+    margin-left: 20px;
+}
+
+input[type = 'submit']{
+    display: block;
+    font-size: 1em;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type = submit]:hover {
+    background-color: var(--cor_escura);
+    color: white;
+    transition-duration: 1s;
+}
+
+a {
+    display: block;
+    width: 90%;
+    font-size: 1em;
+    font-weight: bold;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin: auto;
+    border: 1px solid var(--cor_escura);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: transparent;
+    color: var(--cor_escura);
+    transition-duration: 1s;
+}
+
+a > i {
+    transform: translate(0px, 6px);
+}
+
+
+

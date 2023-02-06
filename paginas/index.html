@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN - IPDDF</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/style.css" media="all">
+    <link rel="stylesheet" href="../estilos/media-queries.css">
+</head>
+<body>
+    <main>
+        <!-- CAIXA DE LOGIN -->
+        <section>
+
+           <!-- PARTE DA IMAGEM --> 
+            <div id="parte_da_imagem">
+
+            </div>
+
+            <!-- PARTE DOS FORMULÁRIOS -->
+            <div id="parte_dos_formularios">
+
+                <!-- DESCRIÇÃO DA CAIXA -->
+                <h1>Login</h1>
+                <p>Faça login com a sua conta para poder acessar as suas notas, estatísticas, eventos, publicações, sua turma, cantina, notícias escolaes e muito mais</p>
+
+                <!-- FORMULÁRIOS -->
+                <form action="login.php" method="post" autocomplete="on">
+
+                    <!-- FORMULÁRIO PARA E-MAIL -->
+                    <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
+                    <label for="ilogin">Login</label>
+
+                    <!-- FORMULÁRIO PARA SENHA -->
+                    <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                    <label for="isenha">Senha</label>
+
+                    <!-- BOTÃO PARA ENVIAR -->
+                    <input type="submit" value="login">
+
+                    <!-- BOTÃO PARA RECUPERAR A CONTA OU SENHA ESQUECIDA -->
+                    <a href="esqueci.html">
+                        Esqueci a senha
+                        <i class="material-icons">mail</i>
+                    </a>
+                    
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
