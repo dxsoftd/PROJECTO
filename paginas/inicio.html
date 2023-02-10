@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
+<!-- CABEÇA / HEAD -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPDDF</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../estilos/inicio.css">
     <link rel="shortcut icon" href="img/1673552152278.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+
+<!-- CORPO / BODY -->
+<body onresize="size()">
+
+    <!-- CABEÇALHO / HEADER -->
     <header>
-        <img src="img/1673552152278.png" alt="logo">
-        <h1>Instituto Politécnico Dom Damião Franklin</h1>
-        <p>Euentes et Docete</p>
-        <menu>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="#">Instituição</a></li>
-                <li><a href="corpo_docente.html">Corpo Docente</a></li>
-                <li><a href="encontre_nos.html">Encontre-nos</a></li>
-            </ul>
-        </menu>
+        <div id="div1">
+            <img src="../img/logo.png" alt="logo">
+            <h1>Instituto Politécnico Dom Damião Franklin</h1>
+            <i id="iburger" class="material-icons" onclick="clique()">menu</i>
+        </div>
+        <div id="div2">
+            <menu  id="itens">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Instituição</a></li>
+                    <li><a href="#">Corpo Docente</a></li>
+                    <li><a href="#">Encontre-nos</a></li>
+                </ul>
+            </menu>
+        </div>
     </header>
+
+    <!-- CONTEÚDO / MAIN -->
     <main>
         <article>
             <section>
@@ -67,6 +80,8 @@
             </section>
         </article>
     </main>
+
+    <!-- RODAPÉ / FOOTER -->
     <footer>
         <a href="https://instagram.com/institutopolitecnicodd?igshid=YmMyMTA2M2Y" target="_blank"><img src="img/logo-instagram.jpg" alt="instagram"></a>
         <a href="https://m.facebook.com/100042176987092/" target="_blank"><img src="img/logo-facebook.jpg" alt="facebook"></a>
@@ -74,5 +89,30 @@
         <hr>
         <p>Created by D(x)Soft - All rigths reserved</p>
     </footer>
+    
+    <!-- ANIMAÇÕES / JAVASCRIPT -->
+    <script>
+
+        //FUNÇÃO PADRA AJUDAR NO FUNCIONAMENTO DO MENU
+        function size(){
+            if(window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            }
+            else{
+                itens.style.display = 'none'
+            }
+        }
+
+        //FUNÇÃO PARA QUANDO CLICAR NO HAMBURGUIN APRESENTAR O MENU
+        function clique(){
+            if(itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }
+            else{
+                itens.style.display = 'block'
+            }
+        }
+    
+    </script>
 </body>
 </html>
