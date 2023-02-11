@@ -41,11 +41,19 @@ body {
 
 /* HEADER */
 header {
-    box-shadow: 0px 3px 10px #4646467f;
+    box-shadow: 0px 3px 10px #4646464f;
     background-color: var(--cor_escura);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* HEADER - DIV1 */
+#div1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 10px;
 }
 
@@ -61,20 +69,20 @@ header h1 {
     margin-right: 15px;
 }
 
-/* HEADER - DIV1 */
-#div1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+/* HAMBURGUER */
+i {
+    cursor: pointer;
+}
+
+i:hover {
+    color: var(--cor_azul);
+    border-radius: 5px;
 }
 
 /* HEADER - DIV2 */
 #div2 {
     display: block;
-    width: 100%;
 }
-/*  */
 
 /* MENU */
 menu {
@@ -89,19 +97,62 @@ menu ul {
 
 menu li {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 menu a {
     text-decoration: none;
-    color: var(--cor_);
+    color: var(--cor_preta);
+    font-weight: bolder;
 }
 
-/* HAMBURGUER */
-i {
-    cursor: pointer;
+menu a:hover{
+    color: var(--cor_branca);
+    transition-duration: 1s;
 }
 
-i:hover {
-    color: var(--cor_azul);
-    border-radius: 5px;
+/* MAIN */
+main {
+    text-align: justify;
+}
+
+/* CONFIGURAÇÕES GERAIS DOS ELEMENTOS DO MAIN */
+
+/* SECÇÃO DE APRESENTAÇÃO */
+section#apresentacao{
+    background: url('../img/paisagem03.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* ARTIGO DA SECÇÃO APRESENTAÇÃO */
+
+section#apresentacao article {
+    background-color: rgba(255, 255, 255, 0.518);
+    padding: 10px;
+}
+
+main h2 {
+    text-align: center;
+    color: var(--cor_escura);
+    padding: 10px 0px;
+}
+
+main p {
+    text-indent: 15px;
+}
+
+main strong {
+    color: var(--cor_media);
+    font-weight: bold;
+}
+
+main a {
+    color: var(--cor_media);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+main a:hover{
+    color: var(--cor_clara);
+    text-decoration: underline;
 }

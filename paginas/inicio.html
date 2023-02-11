@@ -20,10 +20,10 @@
         <div id="div1">
             <img src="../img/logo.png" alt="logo">
             <h1>Instituto Politécnico Dom Damião Franklin</h1>
-            <i id="iburger" class="material-icons" onclick="clique()">menu</i>
+            <i id="iburger" class="material-icons" onclick="menu_openned()">menu</i>
         </div>
         <div id="div2">
-            <menu  id="itens">
+            <menu  id="menu">
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Instituição</a></li>
@@ -37,35 +37,22 @@
     <!-- CONTEÚDO / MAIN -->
     <main>
         <article>
-            <section>
-                <h2>Nossa escola</h2>
-                <p>
-                    O <strong>IPDDF</strong> é uma escola privada de ensino católico que tem como padroeiro o ex-prelado angolano, e arcebispo de <a href="https://pt.wikipedia.org/wiki/Luanda" target="_blank">Luanda</a> - <a href="https://pt.wikipedia.org/wiki/Dami%C3%A3o_Ant%C3%B3nio_Franklin" target="_blank">Dom Damião António Franklin</a>.  
-                </p>
-                <p>
-                   O nossa instituição está disponível para apenas o ensino secundário:
-                </p>
+            <section id="apresentacao">
+                <article>
+                    <h2>Nossa escola</h2>
+                    <p>
+                        O <strong>IPDDF</strong> é uma escola privada de ensino católico que tem como padroeiro o ex-prelado angolano, e arcebispo de <a href="https://pt.wikipedia.org/wiki/Luanda" target="_blank">Luanda</a> - <a href="https://pt.wikipedia.org/wiki/Dami%C3%A3o_Ant%C3%B3nio_Franklin" target="_blank">Dom Damião António Franklin</a>.
+                    </p>
+                    <p>
+                        A nossa Instituição responsbiliza-se pela <strong>formação integral do homem</strong>.
+                    </p>
+                    <div>
+
+                    </div>
+                </article>
             </section>
+            <!--
             <section class="img">
-                <div class="container">
-                    <div id="iciclo" class="bloco1">
-                        <h3>1º CICLO</h3>
-                        <ul>
-                            <li>7ª Classe</li>
-                            <li>8ª Classe</li>
-                            <li>9ª Classe</li>
-                        </ul>
-                    </div>
-                    <div id="iiciclo" class="bloco1">
-                        <h3>2ª CICLO</h3>
-                        <ul>
-                            <li>10ª Classe</li>
-                            <li>11ª Classe</li>
-                            <li>12ª Classe</li>
-                            <li>13ª Classe</li>
-                        </ul>
-                    </div>
-                </div>
             </section>
             <section>
                 <p>
@@ -77,18 +64,18 @@
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum sapiente odit possimus maiores consequuntur repellat commodi vitae, officiis praesentium ex ipsum, ullam doloremque sit suscipit provident labore eum eligendi explicabo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident voluptatum placeat soluta minima, neque fugit nulla iure magni totam praesentium, aperiam suscipit sapiente minus unde a ipsa laboriosam labore tempora! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veritatis quo nulla quisquam expedita deleniti inventore consequuntur dolorum minima accusamus, facilis at eum quidem perferendis tempora quos? Possimus, aut cumque!
                 </p>
-            </section>
+            </section>-->
         </article>
     </main>
 
     <!-- RODAPÉ / FOOTER -->
-    <footer>
+    <!--<footer>
         <a href="https://instagram.com/institutopolitecnicodd?igshid=YmMyMTA2M2Y" target="_blank"><img src="img/logo-instagram.jpg" alt="instagram"></a>
         <a href="https://m.facebook.com/100042176987092/" target="_blank"><img src="img/logo-facebook.jpg" alt="facebook"></a>
         <p>Escola Dom Damião Franklin Av. Pedro de Castro Van Dúnem (Loy), bairro Palanca, Luanda - Angola</p>
         <hr>
         <p>Created by D(x)Soft - All rigths reserved</p>
-    </footer>
+    </footer>-->
     
     <!-- ANIMAÇÕES / JAVASCRIPT -->
     <script>
@@ -104,13 +91,13 @@
         }
 
         //FUNÇÃO PARA QUANDO CLICAR NO HAMBURGUIN APRESENTAR O MENU
-        function clique(){
-            if(itens.style.display == 'block'){
-                itens.style.display = 'none'
+        function menu_openned(){
+            if(menu.style.display == 'block'){
+                menu.style.display = 'none'
             }
             else{
-                itens.style.display = 'block';
-                document.querySelector('.material-icon').value = 'close';
+                menu.style.display = 'block';
+            }
         }
     
     </script>
