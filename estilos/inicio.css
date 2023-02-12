@@ -121,6 +121,7 @@ main h2 {
     text-align: center;
     color: var(--cor_escura);
     margin: 10px 0px;
+    font-size: 2.5em;
 }
 
 main p {
@@ -157,7 +158,7 @@ section#apresentacao1 article {
 }
 
 section#apresentacao1 p {
-    margin-top: 20px;
+    padding: 10px 0px;
 }
 
 /* SECÇÃO DE APRESENTAÇÃO_2 */
