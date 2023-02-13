@@ -38,7 +38,6 @@ body {
     width: 100%;
 }
 
-
 /* HEADER */
 header {
     box-shadow: 0px 3px 10px #46464648;
@@ -144,9 +143,11 @@ main a:hover{
     text-decoration: underline;
 }
 
+/* GRUPO-APRESENTACAO */
+
 /* SECÇÃO DE APRESENTAÇÃO_1 */
 section#apresentacao1{
-    background: url('../img/paisagem03.jpg') no-repeat center center;
+    background: url('../img/paisagem03.jpg') no-repeat bottom center;
     background-size: cover;
 }
 
@@ -191,4 +192,69 @@ section#apresentacao2 {
 .caixas-apresentacao p {
     color: rgb(107, 107, 107);
 
+}
+
+
+/* GRUPO-CURSOS */
+
+/* SECTION CLASSES E CURSOS */
+section#cursos-classes {
+    background: var(--cor_escura) url('../img/menino_estudando.jpg') no-repeat
+    center center fixed;
+    background-size: cover;
+}
+
+/* OFUSCADOR1 */
+article#back1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2a241dc;
+    color: white;
+}
+
+#back1 h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+#back1 h2:hover {
+    font-size: 2.5em;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#back1 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536);
+    background-color: #f2a5418a;
+    height: 170px;
+    width: 170px;
+    margin: 15px 0px ;
+}
+
+#back1 div:hover {
+    width: 200px;
+    height: 200px;
+    font-size: 1em;
+    background-color: var(--cor_escura);
+
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#back1 h3 {
+    font-size: 1.6em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#back1 ul {
+    list-style-type: none;
 }
