@@ -38,6 +38,11 @@ body {
     width: 100%;
 }
 
+/* BODY - PARÁGRAFOS */
+body p {
+    font-size: 12px;
+}
+
 /* HEADER */
 header {
     box-shadow: 0px 3px 10px #46464648;
@@ -206,47 +211,53 @@ section#cursos-classes {
 
 /* OFUSCADOR1 */
 article#back1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2a241dc;
+    background-color: #f2a24198;
     color: white;
+    padding: 10px;
+    text-align: center;
 }
 
+/* ACESSÓRIOS DO OFUSCUDOR1 */
+
 #back1 h2 {
+    display: block;
     text-align: center;
     color: white;
     font-size: 2em;
+    width: 100%;
 }
 
 #back1 h2:hover {
     font-size: 2.5em;
-    transition-duration: 1s;
+    transition-duration: .5s;
     transition-timing-function: ease;
 }
 
-#back1 div {
+#back1 div.classes {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.536);
-    background-color: #f2a5418a;
-    height: 170px;
-    width: 170px;
-    margin: 15px 0px ;
+    width: 100%;
+    padding: 40px;
 }
 
-#back1 div:hover {
-    width: 200px;
-    height: 200px;
-    font-size: 1em;
-    background-color: var(--cor_escura);
+#back1 > .classes > div {
+    border: 1px solid var(--cor_escura);
+    box-shadow: 1px 1px 6px var(--cor_back1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+}
 
-    transition: all 1s;
-    transition-timing-function: ease-in-out;
+#back1 > .classes > div:hover {
+    background-color: var(--cor_branca);
+    color: var(--cor_escura);
+    box-shadow: 1px 1px 6px var(--cor_back1);
+    width: 200px;
+    height: 150px;
+    transition: all .5s;
+    transition-timing-function: ease;
 }
 
 #back1 h3 {
