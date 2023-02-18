@@ -42,7 +42,7 @@
             
             <!-- PARTE 1 -->
             <section id="apresentacao1">
-                <article>
+                <article id="back1">
                     <h2>Nossa escola</h2>
                     <p>
                         O <strong>IPDDF</strong> é uma escola privada de ensino católico que tem como padroeiro o ex-prelado angolano, e arcebispo de <a href="https://pt.wikipedia.org/wiki/Luanda" target="_blank">Luanda</a> - <a href="https://pt.wikipedia.org/wiki/Dami%C3%A3o_Ant%C3%B3nio_Franklin" target="_blank">Dom Damião António Franklin</a>.
@@ -84,13 +84,14 @@
         <article id="grupo-cursos">
 
             <section id="cursos-classes">
-                <article id="back1">
-                    <h2>Nossas classes e cursos</h2>
+                <article id="back2">
+                    <h2 id="classes-cursos">Nossas classes e cursos</h2>
                     <p>
                         A nossa instituição está preparada para lecionar o seu filho(a).
                     </p>
                     <div class="classes">
-                        
+
+                        <!-- INICIO -->
                         <div>
                             <h3>Iº ciclo</h3>
                             <ul>
@@ -99,6 +100,9 @@
                                 <li>9ª classe</li>
                             </ul>
                         </div>
+                        <!-- FIM -->
+
+                        <!-- INICIO -->
                         <div>
                             <h3>IIº ciclo</h3>
                             <ul>
@@ -108,6 +112,7 @@
                                 <li>13ª classe</li>
                             </ul>
                         </div>
+                        <!-- FIM -->
 
                     </div>
                 </article>
@@ -124,7 +129,7 @@
             <h2>NOSSA ESCOLA</h2>
             <ul>
                 <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Nossos cursos</a></li>
+                <li><a href="#classes-cursos">Nossos cursos</a></li>
                 <li><a href="#">Corpo Docente</a></li>
                 <li><a href="#">Eventos IPDDF</a></li>
             </ul>
@@ -135,10 +140,10 @@
         <div>
             <h2>OBTER AJUDA</h2>
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Horário escolar</a></li>
+                <li><a href="#">Proprinas</a></li>
+                <li><a href="#">Cursos e classes disponíveis</a></li>
             </ul>
         </div>
         <!-- FIM -->
@@ -146,59 +151,62 @@
         <!-- INICIO -->
         <div>
             <h2>ENDEREÇO</h2>
-            <p></p>
+            <a href="#">Av. Pedro de Castro Van-Dúnem Loy, Palanca</a>
         </div>
         <!-- FIM -->
 
         <!-- INICIO -->
         <div>
             <h2>MANTENHA-SE INFORMADO</h2>
+
+            <!-- INICIO -->
             <div>
                 <form action="../banco de dados/banco_de_dados.php" method="post" autocomplete="on">
                     <input type="email" name="mail" id="imail" placeholder="Digite o seu e-mail" autocomplete="email"><br>
                     <input type="submit" value="SUBESCREVER">
                 </form>
             </div>
-        </div>
-        <!-- FIM -->
+            <!-- FIM -->
 
-        <!-- INICIO -->
-        <div class="medias-socias">
-            <a href="#"> <i class="fa fa-facebook"></i> </a>
-            <a href="#"> <i class="fa fa-instagram"></i> </a>
-            <a href="#"> <i class="fa fa-twitter"></i> </a>
-            <a href="#"> <i class="fa fa-whatsapp"></i> </a>
+            <!-- INICIO -->
+            <div class="medias-socias">
+                <a href="#"> <i class="fa fa-facebook"></i> </a>
+                <a href="#"> <i class="fa fa-instagram"></i> </a>
+                <a href="#"> <i class="fa fa-twitter"></i> </a>
+                <a href="#"> <i class="fa fa-whatsapp"></i> </a>
+            </div>
+            <!-- FIM -->
+
         </div>
         <!-- FIM -->
-        <hr>
         <p>2023 D(x)Soft | All Rigths Reserved</p>
-        
+
     </footer>
 
 
-        <!-- ANIMAÇÕES JAVASCRIPT -->
-        <script>
+    <!-- ANIMAÇÕES JAVASCRIPT -->
+    <script>
 
-            //FUNÇÃO PARA AJUDAR NO FUNCIONAMENTO DO MENU
-            function size(){
-                if(winodw.innerWidth >= 768){
-                    itens.style.display = 'block'
-                }
-                else{
-                    itens.style.display = 'none'
-                }
+        //FUNÇÃO PARA AJUDAR NO FUNCIONAMENTO DO MENU
+        function size(){
+            if(winodw.innerWidth >= 768){
+                itens.style.display = 'block'
             }
-
-            //FUNÇÃO PARA QUANDO CLICAR NO HAMBURGUIN APRESENTAR O MENU
-            function menu_openned(){
-                if(menu.style.display == 'block'){
-                    menu.style.display = 'none'
-                }
-                else{
-                    menu.style.display = 'block'
-                }
+            else{
+                itens.style.display = 'none'
             }
+        }
 
-        </script>
+        //FUNÇÃO PARA QUANDO CLICAR NO HAMBURGUIN APRESENTAR O MENU
+        function menu_openned(){
+            if(menu.style.display == 'block'){
+                menu.style.display = 'none'
+            }
+            else{
+                menu.style.display = 'block'
+            }
+        }
+
+    </script>
 </body>
 </html>

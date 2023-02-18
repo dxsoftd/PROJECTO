@@ -158,8 +158,8 @@ section#apresentacao1{
     background-size: cover;
 }
 
-/* ARTIGO DA SECÇÃO APRESENTAÇÃO */
-section#apresentacao1 article {
+/* OFUSCADOR1 */
+section#apresentacao1 #back1 {
     background-color: rgba(0, 0, 0, 0.313);
     color: white;
     padding: 15px;
@@ -210,17 +210,17 @@ section#cursos-classes {
     background-size: cover;
 }
 
-/* OFUSCADOR1 */
-article#back1{
+/* OFUSCADOR2 */
+article#back2{
     background-color: #f2a24198;
     color: white;
     padding: 10px;
     text-align: center;
 }
 
-/* ACESSÓRIOS DO OFUSCUDOR1 */
+/* ACESSÓRIOS DO OFUSCUDOR2 */
 
-#back1 h2 {
+#back2 h2 {
     display: block;
     text-align: center;
     color: white;
@@ -228,31 +228,31 @@ article#back1{
     width: 100%;
 }
 
-#back1 h2:hover {
+#back2 h2:hover {
     font-size: 2.5em;
     transition-duration: .5s;
     transition-timing-function: ease;
 }
 
-#back1 div.classes {
+#back2 div.classes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 0px 40px;
-    margin: 20px 0px;
+    width: 360px;
+    padding: 0px 20px;
+    margin: auto;
 }
 
-#back1 > .classes > div {
+#back2 > .classes > div {
     border: 1px solid var(--cor_escura);
     box-shadow: 1px 1px 6px var(--cor_back1);
     border-radius: 10px;
-    padding: 10px;
     width: 150px;
     height: 170px;
+    margin: 20px 5px;
 }
 
-#back1 > .classes > div:hover {
+#back2 > .classes > div:hover {
     background-color: var(--cor_branca);
     color: var(--cor_escura);
     box-shadow: 1px 1px 6px var(--cor_back1);
@@ -262,13 +262,13 @@ article#back1{
     transition-timing-function: ease;
 }
 
-#back1 h3 {
+#back2 h3 {
     font-size: 1.6em;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
-#back1 ul {
+#back2 ul {
     list-style-type: none;
 }
 
@@ -289,7 +289,6 @@ footer {
 footer div {
     padding: 10px;
     line-height: 1.5em;
-    position: relative;
 }
 
 footer ul {
@@ -312,13 +311,15 @@ footer a, p {
     text-align: 12px;
     color: var(--cor_branca);
     text-decoration: none;
-    text-transform: capitalize;
 }
 
 footer div ul li a:hover {
     padding-left: 10px;
     color: rgb(207, 207, 207);
     transition: all .3s ease;
+}
+
+footer #classes-cursos {
 }
 
 /* FOOTER - FORMULÁRIO */
@@ -355,7 +356,6 @@ input[type = submit] {
 /* FOOTER - ICONS */
 div.medias-socias {
     display: flex;
-    margin: auto;
 }
 
 div.medias-socias a{
@@ -374,6 +374,7 @@ div.medias-socias a{
 
 div.medias-socias a:hover {
     background-color: var(--cor_branca);
+    color: var(--cor_azul);
 }
 
 div.medias-socias a i {
@@ -381,14 +382,6 @@ div.medias-socias a i {
 }
 
 /* FOOTER - DIREITOS DO AUTOR */
-
-footer > hr {
-    width: 100%;
-    margin: 10px 0px;
-    outline: none;
-    border: 0.5px solid var(--cor_branca);
-
-}
 footer > p {
     display: block;
     width: 100%;
