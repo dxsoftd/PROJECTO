@@ -198,7 +198,6 @@ section#apresentacao2 {
 
 .caixas-apresentacao p {
     color: rgb(107, 107, 107);
-
 }
 
 
@@ -325,6 +324,9 @@ footer div ul li a:hover {
 /* FOOTER - FORMULÁRIO */
 input[type = email] {
     margin: 5px 0px;
+    outline: none;
+    color: white;
+    font-size: 15px;
     border: 1px solid var(--cor_branca);
     border-radius: 3px;
     background-color: transparent;
@@ -333,18 +335,21 @@ input[type = email] {
 }
 
 input[type = email]::placeholder {
-    color: white;
+    color: rgb(222, 222, 222);
 }
 
 input[type = submit] {
     margin: 5px 0px 0px 0px;
+    font-size: 17px;
+    outline: none;
     background-color: var(--cor_branca);
     border-radius: 3px;
     border: none;
     padding: 10px;
     width: 100%;
     color: var(--cor_escura);
-    font-weight: bolder;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* FOOTER - ICONS */
@@ -353,8 +358,39 @@ div.medias-socias {
     margin: auto;
 }
 
-div.medias-socias i{
-    font-size: 25px;
-    margin-right: 20px;
-    transition: all .3s ease;
+div.medias-socias a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 10px 0px;
+    text-decoration: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: var(--cor_branca);
+    border: 1px solid var(--cor_branca);
+    transition: all .5s ease;
+}
+
+div.medias-socias a:hover {
+    background-color: var(--cor_branca);
+}
+
+div.medias-socias a i {
+    font-size: 20px;
+}
+
+/* FOOTER - DIREITOS DO AUTOR */
+
+footer > hr {
+    width: 100%;
+    margin: 10px 0px;
+    outline: none;
+    border: 0.5px solid var(--cor_branca);
+
+}
+footer > p {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
