@@ -52,6 +52,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 /* HEADER - DIV1 */
@@ -163,6 +167,7 @@ section#apresentacao1 #back1 {
     background-color: rgba(0, 0, 0, 0.313);
     color: white;
     padding: 15px;
+    padding-top: 100px;
 }
 
 section#apresentacao1 p {
