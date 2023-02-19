@@ -205,8 +205,7 @@ section#apresentacao2 {
 
 /* SECTION CLASSES E CURSOS */
 section#cursos-classes {
-    background: var(--cor_escura) url('../img/menino_estudando.jpg') no-repeat
-    center center fixed;
+    background: var(--cor_escura) url('../img/menino_estudando.jpg') no-repeat right center fixed;
     background-size: cover;
 }
 
