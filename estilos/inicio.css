@@ -319,9 +319,6 @@ footer div ul li a:hover {
     transition: all .3s ease;
 }
 
-footer #classes-cursos {
-}
-
 /* FOOTER - FORMULÁRIO */
 input[type = email] {
     margin: 5px 0px;
