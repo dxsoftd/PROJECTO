@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÕEOS GERAIS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+/* CORPO PRINCIPAL */
+main {
+}
+
+/* ACESSÓRIOS DO MEU CORPO PRINICIPAL */
+main #back3 {
+    padding-top: 100px;
+}
+
+main h2 {
+    font-size: 1.7em
+}
+
+#backfoto1 {
+    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat top center;
+    background-size: cover;
+}
+
+/* OFUSCADOR1 */
+#back3 {
+    background-color: #f2a24198;
+    padding: 15px;
+}
+
+#back3 h2 {
+    color: var(--cor_branca);
+}
+/* OFUSCADOR2 */
