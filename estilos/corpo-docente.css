@@ -27,8 +27,6 @@
 }
 
 /* CORPO PRINCIPAL */
-main {
-}
 
 /* ACESSÓRIOS DO MEU CORPO PRINICIPAL */
 main #back3 {
@@ -51,77 +49,168 @@ main h2 {
 }
 
 /* FUNDO DA ÁREA DOCENTE */
-#back4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+/*
+Typical Device Breakpoinnts
+
+Pequenas telas: até 600px
+Celular: de 600px até 768cp
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+.grupo_doc {
+    display: none;
 }
 
+@media screen and (min-width: 992px) { /* TELAS GRANDES */
 
-.docente {
-    height: 250px;
-    width: 200px;
-    margin: 5px 0px;
-    background-size: 250px;
-    border-radius: 5px;
-    overflow: hidden;
+    /* FUNDO DAS CAIXAS DOS DOCENTES */
+    #back4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grupo_doc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* CONFIGURAÇÕES GERAIS DAS CAIXAS DOCENTES */
+
+    .docente {
+        height: 350px;
+        width: 200px;
+        margin: 5px 0px;
+        background-size: 250px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .docente p {
+        text-indent: 0px;
+        color: var(--cor_preta);
+    }
+    
+    .docente > .desc_doc {
+        height: 250px;
+        width: 200px;
+        padding: 10px;
+        opacity: 0%;
+        background-color: rgba(255, 255, 255, 0.308);
+    }
+    
+    .docente > .desc_doc:hover {
+        opacity: 100%;
+        transition: all .3s ease-in-out;
+    }
+
+    /* FOTOS DOS DOCENTES */
+    
+    #doc1{
+        background: black url('../img/boares_gunza.jpg') no-repeat center center;
+        background-size: 250px;
+    }
+
+    /* EFEITO HOVER NOS DOCENTES */
+    
+    #doc1:hover {
+        background-position: center right;
+        background-size: 400px;
+        transition: all .5s ease;
+    }
+    
+    #doc2:hover {
+        background-position: center right;
+        background-size: 400px;
+        transition: all .5s ease;
+    }
+    
+    #doc3:hover {
+        background-position: center right;
+        background-size: 400px;
+        transition: all .5s ease;
+    }
+    
+    #doc4:hover {
+        background-position: center right;
+        background-size: 400px;
+        transition: all .5s ease;
+    }
+    
+    #doc5:hover {
+        background-position: center right;
+        background-size: 400px;
+        transition: all .5s ease;
+    }
 }
 
-.docente p {
-    text-indent: 0px;
-    color: var(--cor_preta);
-}
-
-.docente > .desc_doc {
-    height: 250px;
-    width: 200px;
+.doc {
+    background-color: #fff;
     padding: 10px;
-    opacity: 0%;
-    background-color: rgba(255, 255, 255, 0.308);
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
 }
 
-.docente > .desc_doc:hover {
-    opacity: 100%;
-    transition: all .3s ease-in-out;
+.doc .align-items {
+    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.6);
+    padding: 30px;
+    border-radius: 10px;
 }
 
-#doc1{
+.doc .align-items .picture_doc {
     background: black url('../img/boares_gunza.jpg') no-repeat center center;
-    background-size: 250px;
+    background-size: cover;
+    padding: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+    float: left;
+    transition: 0.3s ease-in-out;
 }
 
-#doc1:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items:hover .picture_doc {
+    transform: scale(1.1);
+    background-size: right center;
 }
 
-#doc1:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items .info_doc {
+    padding-left: 30px;
 }
 
-#doc1:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: var(--cor_escura);
 }
 
-#doc2:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
 }
 
-#doc3:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items span::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: var(--cor_media);
+    bottom: 0;
+    left: 0;
 }
 
-#doc4:hover {
-    background-size: 400px;
-    transition: all .5s ease;
-}
-
-#doc5:hover {
-    background-size: 400px;
-    transition: all .5s ease;
+.doc .align-items p {
+    margin: 10px 0px 0px 0px;
+    font-size: 14px;
+    color: black;
+    text-indent: 0px;
 }
