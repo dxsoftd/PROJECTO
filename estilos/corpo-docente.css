@@ -60,11 +60,20 @@ Desktop: 992px até 1200px
 Grandes telas: acima de 1200px
 */
 
-.grupo_doc {
+#back4 {
+    background: var(--cor_escura) url('../img/cores.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.grupo_doc1 {
     display: none;
 }
 
 @media screen and (min-width: 992px) { /* TELAS GRANDES */
+
+    .grupo_doc2 {
+        display: none;
+    }
 
     /* FUNDO DAS CAIXAS DOS DOCENTES */
     #back4 {
@@ -149,48 +158,56 @@ Grandes telas: acima de 1200px
     }
 }
 
-.doc {
-    background-color: #fff;
+.grupo_doc2 {
+    background-color: var(--cor_branca);
     padding: 10px;
-    display: flex;
-    align-items: center;
     width: 90%;
     margin: auto;
-}
-
-.doc .align-items {
-    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.6);
-    padding: 30px;
     border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.195);
+    padding: 30px;
+    overflow: hidden;
 }
 
-.doc .align-items .picture_doc {
+.grupo_doc2 {
+    
+}
+
+.grupo_doc2 .align-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grupo_doc2 .align-items .picture_doc {
     background: black url('../img/boares_gunza.jpg') no-repeat center center;
     background-size: cover;
-    padding: 80px;
-    margin-right: 10px;
     border-radius: 50%;
-    float: left;
+    height: 250px;
+    width: 250px;
+    padding: 80px;
+    margin: auto;
+
     transition: 0.3s ease-in-out;
 }
 
-.doc .align-items:hover .picture_doc {
+.grupo_doc2 .align-items:hover .picture_doc {
     transform: scale(1.1);
-    background-size: right center;
+    background-position: center right;
 }
 
-.doc .align-items .info_doc {
-    padding-left: 30px;
+.grupo_doc2 .align-items .info_doc {
+    margin: 30px 0px 0px 0px;
+    line-height: 30px;
 }
 
-.doc .align-items h4 {
+.grupo_doc2 .align-items h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
-    color: var(--cor_escura);
 }
 
-.doc .align-items span {
+.grupo_doc2 .align-items span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
@@ -198,17 +215,16 @@ Grandes telas: acima de 1200px
     font-weight: 500;
 }
 
-.doc .align-items span::after {
+.grupo_doc2 .align-items span::after {
     content: '';
     display: block;
     width: 50px;
     height: 1px;
     background-color: var(--cor_media);
-    bottom: 0;
-    left: 0;
+    top: 10px;
 }
 
-.doc .align-items p {
+.grupo_doc2 .align-items p {
     margin: 10px 0px 0px 0px;
     font-size: 14px;
     color: black;
