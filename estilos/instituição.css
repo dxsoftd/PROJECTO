@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÕEOS GERAIS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+/* IMAGEM DE FUNDO DA INSTUIÇÃO */
+.back5 {
+    background: var(--cor_escura) url('../img/aluno.jpg') no-repeat left center fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    display: block;
+    position: inherit;
+}
+
+/*  ACESSÓRIOS DO MEU FUNDO DA INSTITUIÇÃO */
+.back5 h2, p {
+    text-align: left;
+}
+
+.back5 h2 {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
+}
+
+.back5 p {
+    text-indent: 0px;
+}
+
+/* IMAGEM DA INSTITUIÇÃO */
+#imagem_da_escola {
+    background: transparent url('../img/paisagem03.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    width: 85%;
+    border-radius: 2px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+#imagem_da_escola:hover {
+    transform: translate(-50%, -35%);
+    transition: .5s ease-in-out;
+}
+
+/* SEGUNDA SECTION */
+.back6{
+    padding: 150px 10px 10px 10px;
+}
+
+.back6 p{
+    color: black;
+    text-align: justify;
+}

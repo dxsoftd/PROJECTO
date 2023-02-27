@@ -5,14 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPDDF / Instituição</title>
-    <!-- LINK PARA FAVICON -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- LINK PARA ESTILOS -->
-    <link rel="stylesheet" href="style.css">
 
-    <!-- LINK PARA REDES SOCIAIS -->
+    <!-- LINK PARA O HAMBURGUER -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- LINK PARA REDES SOCIAS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- LINK PARA FAVICON -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    
+    <!-- LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/instituição.css">
 </head>
 <body>
-    
+
+    <!-- CABEÇALHO / HEADER -->
+    <header>
+
+        <!-- START PARTE 1 DO HEADER -->
+        <div id="div1">
+            <img src="../img/logo.png" alt="logo">
+            <h1>Instituto Politécnico Dom Damião Franklin</h1>
+            <i id="iburger" class="material-icons" onclick="menu_openned()">menu</i>
+        </div>
+        <!-- END PARTE 1 DO HEADER -->
+
+        <!-- START PARTE 2 DO HEADER -->
+        <div id="div2">
+            <menu id="menu">
+                <ul>
+                    <li> <a href="inicio.html">Início</a> </li>
+                    <li> <a href="instituição.html">Instituição</a><i class="material-icons"></i></li>
+                    <li> <a href="corpo-docente.html">Corpo Docente</a> </li>
+                    <li> <a href="encontre-nos.html">Encontre-nos</a> </li>
+                </ul>
+            </menu>
+        </div>
+        <!-- END PARTE 2 DO HEADER -->
+
+    </header>
+
+    <main>
+        <section class="back5">
+            <h2>Nossa Instituição</h2>
+            <p>Euentes et docete</p>
+            <div id="imagem_da_escola">
+            </div>
+        </section>
+        <section class="back6">
+            <p>
+                O <strong>Instituto Politécnico Dom Damião Franklin</strong> nasceu do amor de um pesquisador alemão por uma Professora universitária brasileira.
+            </p>
+        </section>
+    </main>
+
+    <!-- RODAPÉ / FOOTER -->
+    <footer>
+
+        <!-- START COLGROUP -->
+        <div>
+            <h2>NOSSA ESCOLA</h2>
+            <ul>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#classes-cursos">Nossos cursos</a></li>
+                <li><a href="#">Corpo Docente</a></li>
+                <li><a href="#">Eventos IPDDF</a></li>
+            </ul>
+        </div>
+        <!-- END COLGROUP -->
+
+        <!-- START COLGROUP -->
+        <div>
+            <h2>OBTER AJUDA</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Horário escolar</a></li>
+                <li><a href="#">Proprinas</a></li>
+                <li><a href="#">Cursos e classes disponíveis</a></li>
+            </ul>
+        </div>
+        <!-- END COLGROUP -->
+
+        <!-- START COLGROUP -->
+        <div>
+            <h2>ENDEREÇO</h2>
+            <a href="#">Av. Pedro de Castro Van-Dúnem Loy, Palanca</a>
+        </div>
+        <!-- END COLGROUP -->
+
+        <!-- START COLGROUP -->
+        <div>
+            <h2>MANTENHA-SE INFORMADO</h2>
+
+            <!-- START FORM -->
+            <div>
+                <form action="../banco de dados/banco_de_dados.php" method="post" autocomplete="on">
+                    <input type="email" name="mail" id="imail" placeholder="Digite o seu e-mail" autocomplete="email" required><br>
+                    <input type="submit" value="SUBESCREVER">
+                </form>
+            </div>
+            <!-- END FORM -->
+
+            <!-- START MEDIAS SOCIAIS -->
+            <div class="medias-socias">
+                <a href="#"> <i class="fa fa-facebook"></i> </a>
+                <a href="#"> <i class="fa fa-instagram"></i> </a>
+                <a href="#"> <i class="fa fa-twitter"></i> </a>
+                <a href="#"> <i class="fa fa-whatsapp"></i> </a>
+            </div>
+            <!-- END MEDIAS SOCIAIS -->
+
+        </div>
+        <!-- END COLGROUP -->
+
+        <p>2023 D(x)Soft | All Rigths Reserved</p>
+
+    </footer>
+
+    <script src="../animações/menu.js"></script>
 </body>
 </html>
