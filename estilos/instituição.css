@@ -85,7 +85,7 @@
     width: 50%;
     height: 1px;
     animation: deslizar_a_direita 2s ease-in forwards;
-    animation-play-state: paused;
+    animation-play-state: running;
 }
 
 .back6 p {
