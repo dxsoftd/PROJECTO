@@ -238,11 +238,11 @@ article#back2{
     transition-timing-function: ease;
 }
 
-#back2 div.classes {
+#back2 .classes {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 360px;
+    max-width: 600px;
     padding: 0px 20px;
     margin: auto;
 }
