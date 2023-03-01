@@ -26,7 +26,7 @@
     font-family: var(--font1);
 }
 
-/* IMAGEM DE FUNDO DA INSTUIÇÃO */
+/* PRIMEIRA SECTION - IMAGEM DE FUNDO DA INSTUIÇÃO */
 .back5 {
     background: var(--cor_escura) url('../img/aluno.jpg') no-repeat left center fixed;
     background-size: cover;
@@ -54,27 +54,53 @@
     background: transparent url('../img/paisagem03.jpg') no-repeat center center;
     background-size: cover;
     height: 200px;
-    width: 85%;
+    width: 300px;
     border-radius: 2px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.286);
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-}
-
-#imagem_da_escola:hover {
-    transform: translate(-50%, -35%);
-    transition: .5s ease-in-out;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 /* SEGUNDA SECTION */
 .back6{
-    padding: 150px 10px 10px 10px;
+    padding: 20px;
 }
 
 .back6 p{
     color: black;
     text-align: justify;
+}
+
+.back6 h3 {
+    color: var(--cor_escura);
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.back6 h3::after {
+    content: ' ';
+    display: block;
+    background-color: var(--cor_escura);
+    width: 50%;
+    height: 1px;
+    animation: deslizar_a_direita 2s ease-in forwards;
+    animation-play-state: paused;
+}
+
+.back6 p {
+    margin-bottom: 15px;
+}
+
+/* MEUS KEYFRAMES  - ANIMAÇÕES COM CSS */
+
+@keyframes deslizar_a_direita {
+
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+
 }
