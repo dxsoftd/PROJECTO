@@ -121,6 +121,11 @@ menu a:hover{
     transition-duration: 1s;
 }
 
+/* BUTTON */
+button {
+    padding: 5px;
+}
+
 /* MAIN */
 main {
     text-align: justify;
