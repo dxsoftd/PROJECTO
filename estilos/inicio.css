@@ -319,6 +319,39 @@ article#back2{
     list-style-type: none;
 }
 
+.cursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor_media);
+}
+
+.cursos div {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    color: var(--cor_branca);
+}
+
+.cursos div h3 {
+    text-align: center;
+}
+
+#informatica {
+    background: url('../img/caderno\ em\ branco.jpg');
+}
+
+#bioquimica {
+    background: url('../img/aluna001.jpg') center center;
+    background-size: cover;
+}
+
+#desenhador_projetista {
+    background: url('../img/aperto_de_mao.jpg');
+}
+
+
 /* FOOTER */
 footer {
     display: flex;
