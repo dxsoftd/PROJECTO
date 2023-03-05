@@ -104,3 +104,90 @@
     }
 
 }
+
+/* SECTION - EVENTOS */
+.eventos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/paisagem02.jpg') no-repeat left center fixed;
+    background-size: cover;
+}
+
+.eventos .img-eventos {
+    width: 90%;
+    height: 325px;
+    background-color: var(--cor_azul);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.eventos .img-eventos div {
+    height: 100%;
+    width: 100%;
+}
+
+/* FOTOS DOS EVENTOS */
+#dia_do_heroi {
+    background: var(--cor_media) url('../img/dia_do_heroi.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#mes_da_biblia {
+    background: var(--cor_media) url('../img/mes_da_biblia.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#palestra_de_prevencao_ao_suicidio {
+    background: var(--cor_media) url('../img/palestra_de_prevencao_ao_suicidio.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#santo_do_mes {
+    background: var(--cor_media) url('../img/santo_do_mes.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#dia_do_professor {
+    background: var(--cor_media) url('../img/dia_mundial_do_professor.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#dia_mundial_da_saude_mental {
+    background: var(--cor_media) url('../img/dia_mundial_da_saude_mental.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#dia_mundial_da_luta_contra_o_suicidio {
+    background: var(--cor_media) url('../img/dia_mundial_da_luta_contra_o_suicidio.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#dia_mundial_do_sonho {
+    background: var(--cor_media) url('../img/dia_mundial_do_sonho.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#campanha_de_doacao_de_livros {
+    background: var(--cor_media) url('../img/campanha_de_doacao_de_livros.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#campanha_de_arborizacao {
+    background: var(--cor_media) url('../img/campanha_de_arborizacao.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
+#outubro_rosa {
+    background: var(--cor_media) url('../img/outubro_rosa.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
