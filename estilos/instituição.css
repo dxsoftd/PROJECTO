@@ -112,14 +112,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('../img/paisagem02.jpg') no-repeat left center fixed;
+    background: var(--cor_branca) url('../img/paisagem02.jpg') no-repeat left center fixed;
     background-size: cover;
 }
 
 .eventos .img-eventos {
     width: 90%;
     height: 325px;
-    background-color: var(--cor_azul);
+    background-color: var(--cor_escura);
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -133,6 +133,7 @@
 .eventos .img-eventos div {
     height: 100%;
     width: 100%;
+    background-color: var(--cor_escura);
 }
 
 /* FOTOS DOS EVENTOS */
@@ -191,3 +192,26 @@
     background-size: 300px;
 }
 
+/* SECTION - GRUPO RECURSOS */
+.grupo-recursos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor_media);
+    padding: 10px;
+}
+
+.grupo-recursos h2 {
+    color: var(--cor_branca);
+}
+
+.grupo-recursos .recursos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}

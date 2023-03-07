@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÕEOS GERAIS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--cor_azul) url('../img/paisagem01.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+div.container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100vh;
+}
+
+div.container div.titulo-login {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--cor_escura);
+}
+
+div.container .form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container .form .form-child {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container .form .form-child form {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+div.container .form .form-child .inputbox {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+}
+
+div.container .form .form-child .inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--cor_branca);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+div.container .form .form-child .inputbox span {
+    position: absolute;
+    left: -10px;
+    padding: 20px 10px 10px;
+    color: var(--cor_branca);
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s ease-in-out;
+}
+
+div.container .form .form-child span {
+    position: absolute;
+    color: var(--cor_escura);
+    text-align: left;
+}
+
+div.container .form .form-child p {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div.container .form .form-child p a {
+    width: 100%;
+    font-size: 16px;
+    color: var(--cor_branca);
+    text-align: center;
+    text-decoration: none;
+}
+
+div.container .form .form-child p a.strong {
+    color: var(--cor_escura);
+    font-weight: 700;
+}
+
+div.container .form .form-child input[type = submit] {
+    font-size: 1.2em;
+    background-color: var(--cor_branca);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: var(--cor_escura);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+div.container .form .form-child input:valid ~ span, div.container .form .form-child input:focus ~ span {
+    color: var(--cor_escura);
+    background-color: transparent;
+    transform: translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputbox i{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor_escura);
+    pointer-events: none;
+    border-radius: 3px;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.inputbox input:valid ~ i, .inputbox input:focus ~ i {
+    height: 44px;
+}
+
