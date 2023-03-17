@@ -66,17 +66,14 @@ Grandes telas: acima de 1200px
 }
 
 #back4 h2 {
-    margin-top: 0px;
+    margin: 20px 0px;
+    display: block;
+    width: 100%;
 }
 
-.grupo_doc1 {
-    display: none;
-}
-
-.grupo_doc2 {
+.grupo_doc {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: var(--cor_branca);
@@ -87,8 +84,11 @@ Grandes telas: acima de 1200px
 }
 
 /* CONFIGURAÇÕES GERAIS DOS PROFESSORES */
-.grupo_doc2 .docentes {
-    display: block;
+.grupo_doc .docentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 25px;
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.282);
@@ -96,15 +96,24 @@ Grandes telas: acima de 1200px
     width: 100%;
 }
 
-.grupo_doc2 .docentes .picture_doc {
+.grupo_doc .docentes .picture_doc {
     height: 150px;
     width: 150px;
     margin: auto;
-
+    
     transition: 0.3s ease-in-out;
 }
 
-.grupo_doc2 > .container_doc > .docentes > .info_doc h4{
+.grupo_doc .docentes .info_doc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+
+.grupo_doc > .container_doc > .docentes > .info_doc h4{
     color: var(--cor_escura);
 }
 
@@ -150,25 +159,25 @@ Grandes telas: acima de 1200px
 }
 
 /* PARTE DESCRITIVA DOS PROFESSORES */
-.grupo_doc2 .docentes .info_doc {
+.grupo_doc .docentes .info_doc {
     margin-top: 15px;
     line-height: 30px;
 }
 
-.grupo_doc2 .docentes h4 {
+.grupo_doc .docentes h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
 }
 
-.grupo_doc2 .docentes span {
+. .docentes span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
     font-weight: 500;
 }
 
-.grupo_doc2 .docentes span::after {
+.grupo_doc .docentes span::after {
     content: ' ';
     display: block;
     width: 50px;
@@ -177,9 +186,124 @@ Grandes telas: acima de 1200px
     top: 10px;
 }
 
-.grupo_doc2 .docentes p {
+.grupo_doc .docentes p {
     margin-top: 10px;
     font-size: 14px;
     text-indent: 0px;
     color: black;
 }
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /* HEADER */
+    article#backfoto1 {
+        height: 50px;
+    }
+    
+    section#back3 {
+        height: 50px;
+    }
+
+    #back3 > h2 {
+        font-size: 50px;
+    }
+
+    #back4 h2 {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .grupo_doc {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container_doc {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container_doc > .docentes{
+        width: 250px;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* HEADER */
+    #backfoto1 {
+        height: 300px;
+        background-size: cover;
+    }
+    
+    #back3 {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+    }
+
+    #back3 > h2 {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    #back3 > p {
+        font-size: 16px;
+        text-align: left;
+        margin-top: 10px;
+        text-indent: 0px;
+        width: 1000px;
+    }
+
+    #back4 h2 {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .grupo_doc {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container_doc {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .container_doc > .docentes{
+        width: 350px;
+        overflow: hidden;
+    }
+
+}
+
+/*
+
+Sandra Macassonge
+Ciência da educação especialidade - Historia
+história
+coordenado9ra do ensino geral
+
+Adriano Chicunha
+tecnologia mecanica e POL - pratica oficionais laboratorias
+coordenador do curso de mecanica
+
+Aires Carvalho
+coordenador de bioquimíca
+
+
+
+
+
+*/

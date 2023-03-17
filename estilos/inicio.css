@@ -527,13 +527,40 @@ Grandes telas: acima de 1200px
     .grupo_cursos > div {
         width: 680px;
     }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer > div {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     
     /* HEADER */
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
     header #div1 {
         flex-direction: column;
+        align-items: flex-start;
+        width: 80px;
+    }
+
+    header #div1 h1 {
+        display: none;
     }
 
     #iburger {
@@ -542,7 +569,7 @@ Grandes telas: acima de 1200px
 
     menu {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         margin: 0px 10px;
         flex-direction: column;
@@ -551,18 +578,31 @@ Grandes telas: acima de 1200px
     menu ul {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px;
+        margin: 0px;
     }
 
     menu ul:first-child {
         margin-left: 0px;
     }
 
-    menu ul:last-child {}
+    menu ul:last-child {
+        margin-right: 0px;
+    }
 
     menu ul li {
         margin: 0px 20px;
+    }
+
+    .container_button_menu {
+        display: none;
+    }
+
+    #div2 {
+        align-items: flex-end;
+        width: 90%;
     }
 
     /* BACKGROUND 1 */
@@ -607,4 +647,98 @@ Grandes telas: acima de 1200px
     .caixas-apresentacao:last-child {
         margin-right: 0px;
     }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer > div {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+        
+    /* HEADER */
+    /* HEADER */
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header #div1 {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80px;
+    }
+
+    header #div1 h1 {
+        display: none;
+    }
+
+    #iburger {
+        display: none;
+    }
+
+    menu {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 0px 10px;
+        flex-direction: column;
+    }
+
+    menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    menu ul:first-child {
+        margin-left: 0px;
+    }
+
+    menu ul:last-child {
+        margin-right: 0px;
+    }
+
+    menu ul li {
+        margin: 0px 20px;
+    }
+
+    .container_button_menu {
+        display: none;
+    }
+
+    #div2 {
+        align-items: flex-end;
+        width: 90%;
+    }
+    
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer > div {
+        width: 25%;
+        margin-bottom: 20px;
+    }
+
 }
