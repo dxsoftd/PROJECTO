@@ -48,7 +48,8 @@ body p {
 /* HEADER */
 header {
     box-shadow: 0px 3px 10px #46464648;
-    background-color: var(--cor_escura);
+    background-color: transparent;
+    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +78,7 @@ header h1 {
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
+    color: #804600;
 }
 
 /* HAMBURGUER */
@@ -111,13 +113,39 @@ menu li {
 
 menu a {
     text-decoration: none;
-    color: var(--cor_preta);
+    color: #804600;
     font-weight: bolder;
+    position: relative;
 }
 
-menu a:hover {
-    color: var(--cor_azul);
-    transition-duration: 1s;
+menu a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor_escura);
+
+    
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+menu a:hover::after {
+    width: 100%;
+    animation: linha_da_ancora .6s normal forwards;
+}
+
+/* ANIMAÇÃO DE UNDERLINE DOS NAVEGADORES */
+@keyframes linha_da_ancora {
+    
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+
 }
 
 /* BUTTON */
@@ -508,24 +536,83 @@ Grandes telas: acima de 1200px
 */
 
 /* MEDIA QUERY - TELAS GRANDES */
-@media screen and (min-width: 700px) and (max-width: 992px) { /* tablet */
+@media screen and (min-width: 770px) and (max-width: 992px) { 
 
-    /* OFUSCADOR1 */
-    #apresentacao1 #back1 {
+    #div2 {
+        align-items: flex-end;
+        width: 90%;
+    }
+
+    /* BACKGROUND 1 */
+
+    #apresentacao1 {
+        height: 560px;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    section#apresentacao1 #back1 {
+
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 560px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
+    }
+
+    #apresentacao1 h2 {
+        font-size: 3em;
     }
 
     section#apresentacao1 #back1 p{
-        width: 692px;
+        width: 600px;
         text-indent: 0px;
     }
 
+    section#apresentacao2 {
+        padding: 40px;
+    }
+
+    /* MISSÃO - VISÃO - VALORES */
+    section#apresentacao2 {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    .caixas-apresentacao {
+        width: 400px;
+        margin: 20px 20px;
+        border-radius: 5px;
+    }
+
+    .caixas-apresentacao:first-child {
+        margin-left: 0px;
+    }
+    
+    .caixas-apresentacao:last-child {
+        margin-right: 0px;
+    }
+
     /* CURSOS */
-    .grupo_cursos > div {
-        width: 680px;
+    .grupo_cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0px 30px;
+    }
+
+    .grupo_cursos h2 {
+        display: block;
+        font-size: xx-large;
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .grupo_cursos div {
+        width: 350px;
     }
 
     /* FOOTER */
@@ -541,6 +628,15 @@ Grandes telas: acima de 1200px
         width: 50%;
         margin-bottom: 20px;
     }
+}
+
+@media screen and (min-width: 870px) and (max-width: 1122px) {
+
+    .grupo_cursos {
+        width: 860px;
+        margin: auto;
+    }
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -606,19 +702,22 @@ Grandes telas: acima de 1200px
     }
 
     /* BACKGROUND 1 */
-    section#apresentacao1 {
-        background-position: center center;
-        height: 400px;
-    }
 
-    /* OFUSCADOR1 */
-    #apresentacao1 #back1 {
+    #apresentacao1 {
+        height: 560px;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    section#apresentacao1 #back1 {
+
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
         flex-direction: column;
-        height: 500px;
-        padding: 20px;
+        align-items: flex-start;
+        justify-content: center;
+        height: 560px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
     }
 
     #apresentacao1 h2 {
@@ -630,22 +729,48 @@ Grandes telas: acima de 1200px
         text-indent: 0px;
     }
 
+    section#apresentacao2 {
+        padding: 40px;
+    }
+
     /* MISSÃO - VISÃO - VALORES */
     section#apresentacao2 {
         align-items: flex-start;
         flex-direction: row;
     }
+
     .caixas-apresentacao {
         width: 400px;
         margin: 20px 20px;
         border-radius: 5px;
     }
+
     .caixas-apresentacao:first-child {
         margin-left: 0px;
     }
     
     .caixas-apresentacao:last-child {
         margin-right: 0px;
+    }
+
+    /* CURSOS */
+    .grupo_cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0px 30px;
+    }
+
+    .grupo_cursos h2 {
+        display: block;
+        font-size: xx-large;
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .grupo_cursos div {
+        width: 350px;
     }
 
     footer {
@@ -665,7 +790,6 @@ Grandes telas: acima de 1200px
 
 @media screen and (min-width: 1200px) {
         
-    /* HEADER */
     /* HEADER */
     header {
         display: flex;
@@ -725,7 +849,78 @@ Grandes telas: acima de 1200px
         align-items: flex-end;
         width: 90%;
     }
+
+    /* BACKGROUND 1 */
+
+    #apresentacao1 {
+        height: 560px;
+        background-size: cover;
+        background-position: center center;
+    }
     
+    section#apresentacao1 #back1 {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 560px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
+    }
+
+    #apresentacao1 h2 {
+        font-size: 3em;
+    }
+
+    section#apresentacao1 #back1 p{
+        width: 600px;
+        text-indent: 0px;
+    }
+
+    section#apresentacao2 {
+        padding: 40px;
+    }
+
+    /* MISSÃO - VISÃO - VALORES */
+    section#apresentacao2 {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    .caixas-apresentacao {
+        width: 400px;
+        margin: 20px 20px;
+        border-radius: 5px;
+    }
+
+    .caixas-apresentacao:first-child {
+        margin-left: 0px;
+    }
+    
+    .caixas-apresentacao:last-child {
+        margin-right: 0px;
+    }
+
+    /* CURSOS */
+    .grupo_cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0px 30px;
+    }
+
+    .grupo_cursos h2 {
+        display: block;
+        font-size: xx-large;
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .grupo_cursos div {
+        width: 370px;
+    }   
 
     /* FOOTER */
     footer {

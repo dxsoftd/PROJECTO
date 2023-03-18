@@ -38,7 +38,7 @@ main h2 {
 }
 
 #backfoto1 {
-    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat top center fixed;
+    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -170,7 +170,7 @@ Grandes telas: acima de 1200px
     font-size: 20px;
 }
 
-. .docentes span {
+.docentes span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
@@ -195,24 +195,42 @@ Grandes telas: acima de 1200px
 
 /* MEDIA QUERY */
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media  screen and (min-width: 840px) and (max-width: 992px) {
 
-    /* HEADER */
-    article#backfoto1 {
-        height: 50px;
+    #backfoto1 {
+        height: 560px;
+        background-size: cover;
+        background-position: center center;
     }
     
-    section#back3 {
-        height: 50px;
+    #back3 {
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
     }
 
     #back3 > h2 {
-        font-size: 50px;
+        font-size: 60px;
+        text-align: left;
+    }
+
+    #back3 > p {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 10px;
+        text-indent: 0px;
+        width: 700px;
     }
 
     #back4 h2 {
         width: 100%;
         font-size: 40px;
+        margin-top: 50px;
     }
 
     .grupo_doc {
@@ -224,11 +242,69 @@ Grandes telas: acima de 1200px
         width: 90%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .container_doc > .docentes{
-        width: 250px;
+        width: 350px;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /* HEADER */
+    #backfoto1 {
+        height: 560px;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    #back3 {
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
+    }
+
+    #back3 > h2 {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    #back3 > p {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 10px;
+        text-indent: 0px;
+        width: 700px;
+    }
+
+    #back4 h2 {
+        width: 100%;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .grupo_doc {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container_doc {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .container_doc > .docentes{
+        width: 350px;
         overflow: hidden;
     }
 
@@ -238,17 +314,20 @@ Grandes telas: acima de 1200px
 
     /* HEADER */
     #backfoto1 {
-        height: 300px;
+        height: 560px;
         background-size: cover;
+        background-position: center center;
     }
     
     #back3 {
-        height: 300px;
+        height: 560px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content: center;
         padding-bottom: 50px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
     }
 
     #back3 > h2 {
@@ -257,16 +336,17 @@ Grandes telas: acima de 1200px
     }
 
     #back3 > p {
-        font-size: 16px;
+        font-size: 14px;
         text-align: left;
         margin-top: 10px;
         text-indent: 0px;
-        width: 1000px;
+        width: 700px;
     }
 
     #back4 h2 {
         width: 100%;
         font-size: 40px;
+        margin-top: 50px;
     }
 
     .grupo_doc {
