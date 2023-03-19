@@ -31,6 +31,9 @@ body {
     width: 100%;
     background: var(--cor_azul) url('../img/paisagem01.jpg') no-repeat center center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 div.container {
@@ -38,9 +41,11 @@ div.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;c
+    flex-direction: column;
     width: 100%;
     height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
 div.container div.titulo-login {
@@ -163,3 +168,16 @@ div.container .form .form-child input:valid ~ span, div.container .form .form-ch
     height: 44px;
 }
 
+@media screen and (min-width: 600px){
+
+    div.container {
+        height: 500px;
+        width: 470px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px var(--cor_back1);
+    }
+
+}
+
+
+/*470 570*/

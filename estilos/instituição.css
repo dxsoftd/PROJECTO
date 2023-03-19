@@ -28,7 +28,7 @@
 
 /* PRIMEIRA SECTION - IMAGEM DE FUNDO DA INSTUIÇÃO */
 .back5 {
-    background: var(--cor_escura) url('../img/aluno.jpg') no-repeat left center fixed;
+    background: var(--cor_escura) url('../img/paisagem03.jpg') no-repeat center center fixed;
     background-size: cover;
     padding: 100px 20px;
     text-align: center;
@@ -86,12 +86,18 @@
 /* SECTION - EVENTOS */
 .eventos {
     width: 100%;
+    padding: 0px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--cor_branca) url('../img/paisagem02.jpg') no-repeat left center fixed;
+    background: var(--cor_branca) url('../img/aluno.jpg') no-repeat left center fixed;
     background-size: cover;
+}
+
+.eventos > h2 {
+    color: var(--cor_branca);
+    margin: 0px 40px;
 }
 
 .eventos .img-eventos {
@@ -215,6 +221,132 @@
     #imagem_da_escola {
         width: 450px;
         height: 300px;
+    }
+
+    .eventos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .eventos h2 {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 840px) and (max-width: 970px) {
+    
+    .eventos {
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .back5 {
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .back6 {
+        width: 80%;
+        margin: auto;
+    }
+
+    .back6 h3 {
+        text-transform: uppercase;
+        font-size: 40px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .back6 p {
+        width: 992px;
+        margin: auto;
+        text-indent: 0px;
+    }
+
+    #imagem_da_escola {
+        width: 450px;
+        height: 300px;
+    }
+
+    .eventos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .eventos h2 {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .back5 {
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        background-color: rgba(0, 0, 0, 0.598);
+        background-size: cover;
+        background-position: top center;
+    }
+
+    .back6 {
+        width: 89%;
+        margin: auto;
+    }
+
+    .back6 h3 {
+        text-transform: uppercase;
+        font-size: 40px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .back6 p {
+        text-indent: 0px;
+        text-align: justify;
+    }
+
+    #imagem_da_escola {
+        width: 450px;
+        height: 300px;
+    }
+
+    .eventos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .eventos h2 {
+        display: block;
+        width: 100%;
     }
 
 }
