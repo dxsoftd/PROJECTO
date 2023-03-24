@@ -104,6 +104,8 @@ menu {
 
 menu ul {
     list-style-type: none;
+    background-color: transparent;
+    text-shadow: 0px 0px 50px var(--cor_preta);
 }
 
 menu li {
@@ -113,17 +115,16 @@ menu li {
 
 menu a {
     text-decoration: none;
-    color: #804600;
+    color: var(--cor_branca);
     font-weight: bolder;
     position: relative;
 }
 
-menu a::after {
+menu > ul > li > a::after {
     content: " ";
     width: 0%;
     height: 2px;
     background-color: var(--cor_escura);
-
     
     position: absolute;
     left: 0px;
@@ -166,8 +167,13 @@ menu a:hover::after {
 
 .button_menu a {
     font-size: 17px;
-    color: var(--cor_azul);
-    text-decoration: underline;
+    color: var(--cor_branca);
+    background-color: var(--cor_escura);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
 }
 
 /* MAIN */
@@ -640,66 +646,6 @@ Grandes telas: acima de 1200px
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    
-    /* HEADER */
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header #div1 {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 80px;
-    }
-
-    header #div1 h1 {
-        display: none;
-    }
-
-    #iburger {
-        display: none;
-    }
-
-    menu {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin: 0px 10px;
-        flex-direction: column;
-    }
-
-    menu ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    menu ul:first-child {
-        margin-left: 0px;
-    }
-
-    menu ul:last-child {
-        margin-right: 0px;
-    }
-
-    menu ul li {
-        margin: 0px 20px;
-    }
-
-    .container_button_menu {
-        display: none;
-    }
-
-    #div2 {
-        align-items: flex-end;
-        width: 90%;
-    }
 
     /* BACKGROUND 1 */
 
@@ -789,66 +735,6 @@ Grandes telas: acima de 1200px
 }
 
 @media screen and (min-width: 1200px) {
-        
-    /* HEADER */
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header #div1 {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 80px;
-    }
-
-    header #div1 h1 {
-        display: none;
-    }
-
-    #iburger {
-        display: none;
-    }
-
-    menu {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin: 0px 10px;
-        flex-direction: column;
-    }
-
-    menu ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    menu ul:first-child {
-        margin-left: 0px;
-    }
-
-    menu ul:last-child {
-        margin-right: 0px;
-    }
-
-    menu ul li {
-        margin: 0px 20px;
-    }
-
-    .container_button_menu {
-        display: none;
-    }
-
-    #div2 {
-        align-items: flex-end;
-        width: 90%;
-    }
 
     /* BACKGROUND 1 */
 
@@ -934,6 +820,85 @@ Grandes telas: acima de 1200px
     footer > div {
         width: 25%;
         margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1182px) {
+       
+    /* HEADER */
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header #div1 {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80px;
+    }
+
+    header #div1 h1 {
+        display: none;
+    }
+
+    #iburger {
+        display: none;
+    }
+
+    #div2 {
+        align-items: flex-end;
+        width: 80%;
+    }
+
+    menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 10px;
+    }
+
+    menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    menu ul:first-child {
+        margin-left: 0px;
+    }
+
+    menu ul:last-child {
+        margin-right: 0px;
+    }
+
+    menu ul li {
+        margin: 0px 20px;
+    }
+
+    .container_button_menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30%;
+        padding: 0px;
+    }
+
+    .container_button_menu a {
+        font-weight: lighter;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    .container_button_menu a:hover {
+        background-color: #f2a241bb;
     }
 
 }

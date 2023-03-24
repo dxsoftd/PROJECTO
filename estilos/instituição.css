@@ -177,6 +177,11 @@
     background-size: 300px;
 }
 
+#convocatoria_para_feira_de_ciencias {
+    background: var(--cor_media) url('../img/convocatoria_para_feira_de_ciência.jpg') no-repeat center center;
+    background-size: 300px;
+}
+
 /* SECTION - GRUPO RECURSOS */
 .grupo-recursos {
     width: 100%;

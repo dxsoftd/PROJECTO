@@ -33,7 +33,7 @@ body {
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 div.container {
@@ -46,6 +46,7 @@ div.container {
     height: 100vh;
     background-color: transparent;
     backdrop-filter: blur(10px);
+    transition: .5s ease-in-out;
 }
 
 div.container div.titulo-login {
@@ -178,6 +179,3 @@ div.container .form .form-child input:valid ~ span, div.container .form .form-ch
     }
 
 }
-
-
-/*470 570*/
