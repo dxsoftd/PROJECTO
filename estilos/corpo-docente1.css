@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÕEOS GERAIS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+/* CORPO PRINCIPAL */
+
+/* ACESSÓRIOS DO MEU CORPO PRINICIPAL */
+main #back3 {
+    padding-top: 100px;
+}
+
+main h2 {
+    font-size: 25px;
+}
+
+#backfoto1 {
+    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+
+/* OFUSCADOR1 */
+#back3 {
+    background-color: rgba(0, 0, 0, 0.313);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* FUNDO DA ÁREA DOCENTE */
+
+/*
+Typical Device Breakpoinnts
+
+Pequenas telas: até 600px
+Celular: de 600px até 768cp
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+#back4 {
+    background-color: var(--cor_branca);
+}
+
+#back4 h2 {
+    margin: 20px 0px;
+    display: block;
+    width: 100%;
+}
+
+.grupo_doc1 {
+    display: none;
+}
+
+.grupo_doc2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor_branca);
+    padding: 10px;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* CONFIGURAÇÕES GERAIS DOS PROFESSORES */
+.grupo_doc2 .docentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.282);
+    padding: 20px;
+    width: 100%;
+}
+
+.grupo_doc2 .docentes .picture_doc {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    
+    transition: 0.3s ease-in-out;
+}
+
+.grupo_doc2 .docentes .info_doc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+}
+
+.grupo_doc2 > .container_doc > .docentes > .info_doc h4{
+    color: var(--cor_escura);
+}
+
+/* PARTE DAS FOTOS DOS PROFESSORES */
+#boares_gunza {
+    background: var(--cor_escura) url('../img/boares_gunza.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#jose_tumbo {
+    background: var(--cor_escura) url('../img/jose_tumbo.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#costa_gaspar {
+    background: var(--cor_escura) url('../img/costa_gaspar\ \(2\).jpg') no-repeat top center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Dário_Jovete {
+    background: var(--cor_escura) url('../img/Dário_Jovete.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Elias_David {
+    background: var(--cor_escura) url('../img/Elias_David.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Helder_Domingos {
+    background: var(--cor_escura) url('../img/Helder.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#antonio_cambanda {
+    background: var(--cor_escura) url('../img/antonio_cambanda.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#aderito_ebo {
+    background: var(--cor_escura) url('../img/aderito_ebo.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Bernardo_Luemba {
+    background: var(--cor_escura) url('../img/Bernardo_Luamba.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+/* PARTE DESCRITIVA DOS PROFESSORES */
+.grupo_doc2 .docentes .info_doc {
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.grupo_doc2 .docentes h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.grupo_doc2 .docentes span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.grupo_doc2 .docentes span::after {
+    content: ' ';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: var(--cor_media);
+    top: 10px;
+}
+
+.grupo_doc2 .docentes p {
+    margin-top: 10px;
+    font-size: 14px;
+    text-indent: 0px;
+    color: black;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #back4 h2 {
+        width: 100%;
+    }
+
+    .grupo_doc2 {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container_doc {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container_doc > .docentes{
+        width: 250px;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #back4 h2 {
+        width: 100%;
+    }
+
+    .grupo_doc2 {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container_doc {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .container_doc > .docentes{
+        width: 350px;
+        overflow: hidden;
+    }
+
+}
+
+/*
+
+Sandra Macassonge
+Ciência da educação especialidade - Historia
+história
+coordenado9ra do ensino geral
+
+Adriano Chicunha
+tecnologia mecanica e POL - pratica oficionais laboratorias
+coordenador do curso de mecanica
+
+Aires Carvalho
+coordenador de bioquimíca
+
+
+
+
+*/

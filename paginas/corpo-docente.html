@@ -24,25 +24,76 @@
 
     <!-- CABEÇALHO / HEADER -->
     <header>
+
         <div id="div1">
             <img src="../img/logo.png" alt="logo">
             <h1>Instituto Politécnico Dom Damião Franklin</h1>
-            <i id="iburger" class="material-icons" onclick="menu_openned()">menu</i>
+            <i id="iburger1" class="material-icons" onclick="menu_openned()">menu</i>
         </div>
+
         <div id="div2">
+
             <menu id="menu">
+
                 <ul>
-                    <li><a href="inicio.html">Início</a></li>
-                    <li><a href="instituição.html">Instituição</a></li>
-                    <li><a href="corpo-docente.html">Corpo Docente</a></li>
-                    <li><a href="encontre-nos.html">Encontre-nos</a></li>
+                    <li><a href="inicio.html">CASA</a></li>
+                    <li><a href="instituição.html">INSTITUIÇÃO</a></li>
+                    <li><a href="corpo-docente.html">DOCENTES</a></li>
+                    <li><a href="encontre-nos.html">ENCONTRE-NOS</a></li>
+                    <li><a href="noticias.html">NOTÍCIAS</a></li>
+                    <li><a href="secretaria.html">SECRETARIA</a></li>
                 </ul>
+
                 <div class="container_button_menu">
-                    <button class="button_menu"><a href="sing_up.html">registrar-se</a></button>
-                    <button class="button_menu"><a href="sing_in.html">Iniciar sessão</a></button>
+                    <button class="button_menu" onclick="escolha_entrar()" onmouseenter="escolha_entrar()"> ENTRAR <i class="material-icons" id="icone_abrir" >expand_more</i> </button>
+
+                    <div class="escolha_entrar">
+
+                        <ul>
+                            <li>Criar conta</li>
+                            <li>Iniciar sessão</li>
+                        </ul>
+
+                    </div>
+
                 </div>
+
+            </menu>
+
+        </div>
+
+        <div id="div3">
+
+            <menu id="menu">
+
+                <div class="head_menu">
+
+                    <h2>Menu</h2>
+                    <i id="iburger2" class="material-icons" onclick="menu_openned()">menu</i>
+                    
+                </div>
+
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="inicio.html">Casa</a></li>
+                        <li><a href="instituição.html">Instituição</a></li>
+                        <li><a href="corpo-docente.html">Docentes</a></li>
+                        <li><a href="encontre-nos.html">Encontre-nos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="secretaria.html">Secretaria</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot_menu">
+                    <ul>
+                        <li><a href="escolha_sign_up.html">Criar conta</a></li>
+                        <li><a href="sing_in.html">Iniciar sessão</a></li>
+                    </ul>
+                </div>
+
             </menu>
         </div>
+
     </header>
 
     <!-- CORPO PRINCIPAL -->
@@ -344,7 +395,9 @@
 
     </footer>
 
-    <!-- ANIMAÇÃO DO MENU -->
+
+    <!-- ANIMAÇÕES JAVASCRIPT -->
     <script src="../animações/menu.js"></script>
+    <script src="../animações/color_header.js"></script>
 </body>
 </html>

@@ -26,3 +26,127 @@
     font-family: var(--font1);
 }
 
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--cor_media) url('../img/paisagem03.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* JANELA DE APRESENTAÇÃO */
+.window_after_body {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+/* DIV DE INTRODUÇÃO À REDE SOCIAL */
+.window_after_body > div {
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ACESSÓRIOS DA MINHA DIV DE INTRODUÇÃO */
+.window_after_body h1 {
+    color: var(--cor_escura);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.window_after_body p {
+    font-size: 14px;
+    text-indent: 0px;
+    color: var(--cor_branca);
+}
+
+/* LISTA */
+ul {
+    list-style-type: none;
+}
+
+ul > li {
+    width: 100%;
+    height: 300px;
+    background-color: var(--cor_media);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor_branca);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* OFUSCADOR */
+.sombra {
+    background-color: var(--cor_back1);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.jogos_de_estudo {
+    background-image: url('../img/informatica1.jpg');
+}
+
+.chat {
+    background-image: url('../img/caderno\ em\ branco.jpg');
+}
+
+.aproveitamento_escolar {
+    background-image: url('../img/alunos_na_relva.jpg');
+}
+
+.cantina_escolar {
+    background-image: url('../img/burger.jpg');
+}
+
+/* BOTÕES DE ESCOLHA */
+.escolha_sign_up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.escolha_sign_up > h2 {
+    margin-bottom: 50px;
+}
+
+.escolha_sign_up > button {
+    height: 100px;
+    width: 150px;
+
+    padding: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.495);
+    background-color: var(--cor_escura);
+}
+
+.escolha_sign_up > button > a {
+    color: var(--cor_branca);
+    font-weight: lighter;
+}
+
+
+
+
+
+
+
+

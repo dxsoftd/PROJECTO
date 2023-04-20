@@ -42,14 +42,12 @@ body {
 
 /* BODY - PARÁGRAFOS */
 body p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /* HEADER */
 header {
-    box-shadow: 0px 3px 10px #46464648;
     background-color: transparent;
-    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +55,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+header.rolando {
+    background-color: var(--cor_media);
+    color: var(--cor_branca);
+    transition: background-color .3s ease-in;
 }
 
 /* HEADER - DIV1 */
@@ -78,12 +82,21 @@ header h1 {
     font-size: 15px;
     margin-left: 15px;
     margin-right: 15px;
-    color: #804600;
+    color: var(--cor_escura);
+}
+
+header.rolando h1 {
+    color: var(--cor_branca);
 }
 
 /* HAMBURGUER */
 i {
     cursor: pointer;
+    color: var(--cor_escura);
+}
+
+header.rolando i {
+    color: var(--cor_branca);
 }
 
 i:hover {
@@ -91,44 +104,191 @@ i:hover {
     border-radius: 5px;
 }
 
-/* HEADER - DIV2 */
+/* MENU LARGE DEVICES - DIV2 */
 #div2 {
-    display: block;
+    display: none;
     width: 100%;
 }
 
+/* MENU MOBILE - DIV3 */
+#div3 {
+    background-color: rgba(255, 255, 255, 0.238);
+    height: 100vh;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#div3 menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 414px;
+    padding: 0px;
+    margin-left: auto;
+    color: black;
+    background-color: var(--cor_branca);
+    box-shadow: 0px 0px 20px var(--cor_back1);
+}
+
+/* CABEÇA DO MENU */
+#div3 .head_menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    padding: 10px 16px;
+    margin-top: 0;
+    border-bottom: 1px solid #e6e9ed;
+}
+
+#div3 i {
+    color: var(--cor_escura);
+}
+
+/* CORPO DO MENU */
+#div3 .main_menu{
+    width: 100%;
+}
+
+#div3 .main_menu ul {
+    list-style-type: none;
+    width: 95%;
+    margin: auto;
+}
+
+#div3 .main_menu ul li {
+    width: 100%;
+    padding: 10px 16px;
+    margin-top: 0;
+    border-bottom: 1px solid #e6e9ed;
+}
+
+/* PÉ DO MENU */
+
+.foot_menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: width .5s ease-in-out;
+}
+
+.foot_menu ul {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot_menu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 21px;
+    width: 100%;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: 1px solid var(--cor_escura);
+    border-radius: 3px;
+}
+
+.foot_menu ul li a {
+    font-family: var(--font1);
+}
+
+.foot_menu li:first-child {
+    background-color: #ee9222;
+    transition: all .3s ease-in-out;
+}
+
+.foot_menu li:first-child a {
+    color: var(--cor_branca);
+}
+
+.foot_menu li:first-child:hover {
+    background-color: #b16100;
+}
+
+.foot_menu li:last-child {
+    color: var(--cor_preta);
+    background-color: var(--cor_branca);
+    border: 1px solid #d8dce0;
+    margin-bottom: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.foot_menu li:last-child:hover {
+    background-color: #f2a24198;
+    border: 1px solid var(--cor_escura);
+}
+
+.foot_menu li:last-child a {
+    color: var(--cor_preta);
+}
+
+.foot_menu li:last-child:hover a {
+    color: #f18e14;
+}
+
 /* MENU */
-menu {
+#div3 {
     display: none;
 }
 
 menu ul {
     list-style-type: none;
     background-color: transparent;
-    text-shadow: 0px 0px 50px var(--cor_preta);
 }
 
-menu li {
+#div2 menu li {
     text-align: center;
     margin-bottom: 10px;
 }
 
 menu a {
     text-decoration: none;
-    color: var(--cor_branca);
-    font-weight: bolder;
     position: relative;
+    transition: all .3s ease-in-out;
+}
+
+#div2 menu a {
+    color: var(--cor_branca);
+}
+
+#div3 .main_menu a {
+    color: var(--cor_preta);
 }
 
 menu > ul > li > a::after {
     content: " ";
     width: 0%;
     height: 2px;
-    background-color: var(--cor_escura);
+    background-color: var(--cor_azul);
     
     position: absolute;
     left: 0px;
     bottom: 0px;
+}
+
+#div2 menu a:hover {
+    color: var(--cor_azul);
+}
+
+#div3 menu .main_menu a:hover {
+    color: var(--cor_azul);
 }
 
 menu a:hover::after {
@@ -150,30 +310,24 @@ menu a:hover::after {
 }
 
 /* BUTTON */
-.container_button_menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 20px;
-}
-
 .button_menu {
-    padding: 0px;
-    margin: 0px 10px;
-    background-color: transparent;
-    border: none;
+    display: none;
 }
 
-.button_menu a {
-    font-size: 17px;
-    color: var(--cor_branca);
-    background-color: var(--cor_escura);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100px;
-    height: 50px;
+div.escolha_entrar {
+    overflow: hidden;
+}
+
+div.escolha_entrar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.escolha_entrar ul li {
+    width: 330px;
+    padding: 15px 24px;
 }
 
 /* MAIN */
@@ -213,20 +367,22 @@ main a:hover {
 
 /* SECÇÃO DE APRESENTAÇÃO_1 */
 section#apresentacao1 {
-    background: url('../img/paisagem03.jpg') no-repeat bottom center;
+    background: url('../img/paisagem03.jpg') no-repeat center center;
+    height: 560px;
     background-size: cover;
 }
 
 /* OFUSCADOR1 */
 section#apresentacao1 #back1 {
-    background-color: rgba(0, 0, 0, 0.313);
-    color: white;
-    padding: 15px;
-    padding-top: 100px;
+    padding: 200px 20px 20px 20px;
+    width: 100%;
+    height: 560px;
+    background-color: rgba(0, 0, 0, 0.598);
 }
 
 section#apresentacao1 p {
     padding: 10px 0px;
+    width: 100%;
 }
 
 /* SECÇÃO DE APRESENTAÇÃO_2 */
@@ -307,6 +463,7 @@ article#back2{
     width: 150px;
     height: 170px;
     margin: 20px 5px;
+    cursor: pointer;
 }
 
 #back2 > .classes > div:hover {
@@ -362,6 +519,7 @@ article#back2{
     font-weight: 600;
     color: var(--cor_escura);
     border-radius: 10px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -369,7 +527,37 @@ article#back2{
     overflow: hidden;
 }
 
-#curso_informatica, #curso_bioquimica, #curso_desenhador_projetista, #curso_maquinas_e_motores, #curso_eletricidade {
+.grupo_cursos div .areas:hover #curso_informatica {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.grupo_cursos div .areas:hover #curso_bioquimica {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.grupo_cursos div .areas:hover #curso_desenhador_projetista {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.grupo_cursos div .areas:hover #curso_maquinas_e_motores {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.grupo_cursos div .areas:hover #curso_eletricidade {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+.grupo_cursos div .areas:hover #ensino_geral {
+    background-size: 500px;
+    transition: all .5s ease-in-out;
+}
+
+#curso_informatica, #curso_bioquimica, #curso_desenhador_projetista, #curso_maquinas_e_motores, #curso_eletricidade,#ensino_geral {
     height: 80%;
     width: 100%;
     padding: 10px;
@@ -381,39 +569,45 @@ article#back2{
     align-items: center;
 }
 
-
 /* FOTOS DOS CURSOS */
 #curso_informatica {
     background: white url('../img/informatica2.jpg') no-repeat bottom center;
-    background-size: cover;
+    background-size: 400px;
     color: var(--cor_branca);
     width: 100%;
 }
 
 #curso_bioquimica {
     background: white url('../img/bioquimica.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: 400px;
     color: var(--cor_branca);
     width: 100%;
 }
 
 #curso_desenhador_projetista {
     background: white url('../img/desenhador_projetista.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: 400px;
     color: var(--cor_branca);
     width: 100%;
 }
 
 #curso_maquinas_e_motores {
     background: white url('../img/maquinas_e_motores1.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: 400px;
     color: var(--cor_branca);
     width: 100%;
 }
 
 #curso_eletricidade {
     background: white url('../img/energia_e_instalacoes_eletricas.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: 400px;
+    color: var(--cor_branca);
+    width: 100%;
+}
+
+#ensino_geral {
+    background: white url('../img/aluno.jpg') no-repeat center center;
+    background-size: 400px;
     color: var(--cor_branca);
     width: 100%;
 }
@@ -517,11 +711,15 @@ div.medias-socias a{
 
 div.medias-socias a:hover {
     background-color: var(--cor_branca);
-    color: var(--cor_azul);
 }
 
 div.medias-socias a i {
     font-size: 20px;
+    color: var(--cor_branca);
+}
+
+div.medias-socias a:hover i {
+    color: var(--cor_escura);
 }
 
 /* FOOTER - DIREITOS DO AUTOR */
@@ -558,7 +756,6 @@ Grandes telas: acima de 1200px
     }
     
     section#apresentacao1 #back1 {
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -634,6 +831,7 @@ Grandes telas: acima de 1200px
         width: 50%;
         margin-bottom: 20px;
     }
+
 }
 
 @media screen and (min-width: 870px) and (max-width: 1122px) {
@@ -745,7 +943,6 @@ Grandes telas: acima de 1200px
     }
     
     section#apresentacao1 #back1 {
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -824,7 +1021,7 @@ Grandes telas: acima de 1200px
 
 }
 
-@media screen and (min-width: 1182px) {
+@media screen and (min-width: 1272px) {
        
     /* HEADER */
     header {
@@ -844,24 +1041,31 @@ Grandes telas: acima de 1200px
         display: none;
     }
 
-    #iburger {
+    #iburger1 {
+        display: none;
+    }
+
+    #iburger2 {
         display: none;
     }
 
     #div2 {
+        display: flex;
         align-items: flex-end;
-        width: 80%;
+        width: 90%;
+        padding: 0px;
     }
 
-    menu {
+    #div2 menu {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin: 0px 10px;
+        width: 85%;
     }
 
-    menu ul {
+    #div2 menu ul {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -870,16 +1074,20 @@ Grandes telas: acima de 1200px
         margin: 0px;
     }
 
-    menu ul:first-child {
+    #div2 menu ul:first-child {
         margin-left: 0px;
     }
 
-    menu ul:last-child {
+    #div2 menu ul:last-child {
         margin-right: 0px;
     }
 
-    menu ul li {
+    #div2 menu ul li {
         margin: 0px 20px;
+    }
+
+    div.escolha_entrar {
+        display: none;
     }
 
     .container_button_menu {
@@ -887,18 +1095,44 @@ Grandes telas: acima de 1200px
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        width: 30%;
+        width: 150px;
         padding: 0px;
+        width: 15%;
     }
 
-    .container_button_menu a {
-        font-weight: lighter;
+    .container_button_menu .button_menu {
+        height: 45px;
+        width: 90px;
+        padding: 2px;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
         cursor: pointer;
-        transition: .3s ease-in-out;
+        outline: none;
+        border: none;
+        transition: all .3s ease-in-out;
     }
 
-    .container_button_menu a:hover {
-        background-color: #f2a241bb;
+    .container_button_menu .button_menu {
+        color: var(--cor_escura);
+    }
+
+    .container_button_menu .button_menu:hover {
+        box-shadow: 0px 0px 20px #008FF2;
+    }
+
+    .container_button_menu .button_menu i {
+        color: var(--cor_escura);
+    }
+
+    .container_button_menu .button_menu:hover {
+        background-color: var(--cor_branca);
+    }
+
+    #div3 {
+        display: none;
     }
 
 }
