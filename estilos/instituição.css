@@ -30,7 +30,7 @@
 .back5 {
     background: var(--cor_escura) url('../img/paisagem03.jpg') no-repeat center center fixed;
     background-size: cover;
-    padding: 100px 20px;
+    padding: 170px 20px;
     text-align: center;
     display: block;
     position: inherit;
@@ -61,6 +61,21 @@
     margin-bottom: 20px;
 }
 
+.imagem_do_padroeiro {
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.imagem_do_padroeiro img {
+    height: 200px;
+    width: 350px;
+    border-radius: 5px;
+}
+
 /* SEGUNDA SECTION */
 .back6{
     padding: 20px;
@@ -72,6 +87,7 @@
 }
 
 .back6 h3 {
+    text-align: center;
     color: var(--cor_escura);
     font-size: 30px;
     margin-top: 10px;
@@ -189,12 +205,30 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--cor_media);
+    background-color: var(--cor_branca);
     padding: 10px;
 }
 
-.grupo-recursos h2 {
-    color: var(--cor_branca);
+.grupo-recursos > h2 {
+    font-size: 30px;
+    color: var(--cor_escura);
+    margin: 10px 0px 0px 0px;
+}
+
+.grupo-recursos > hr {
+    height: 2px;
+    width: 100px;
+    margin-bottom: 10px;
+    background-color: var(--cor_escura);
+    border: none;
+    outline: none;
+}
+
+.grupo-recursos > p {
+    color: black;
+    margin-bottom: 50px;
+    text-indent: 0px;
+    text-align: center;
 }
 
 .grupo-recursos .recursos {
@@ -202,8 +236,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
     width: 100%;
+    margin-bottom: 40px;
+}
+
+.recursos h3 {
+    text-align: center;
+}
+
+.recursos hr {
+    height: 1px;
+    width: 200px;
+    background-color: var(--cor_azul);
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.recursos .descricao_do_recurso {
+    padding: 10px;
+}
+
+.recursos .descricao_do_recurso p {
+    text-align: center;
+    color: rgb(107, 107, 107);
 }
 
 /* MEDIA QUERY */
