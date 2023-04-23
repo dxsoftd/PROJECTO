@@ -1,5 +1,139 @@
+@charset "UTF-8";
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+    transition: all .3s ease-in-out;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: orange;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social button {
+    padding: 5px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 0px 7px;
+    color: orange;
+    background-color: orange;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.social button:hover {
+    color: brown;
+    background-color: brown;
+}
+
+.social_media {
+    cursor: pointer;
+}
+
+/* ESTILIZANDO MENU MOBILE */
+.menu_mobile {
+    background-color: rgba(0, 0, 0, 0.341);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    transition: all .5s ease-in-out;
+}
+
+.menu_mobile menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.menu_mobile menu a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 12px;
+    width: 100%;
+}
+
+.menu_mobile menu a:hover {
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+.hamburguer {
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 766px) {
+
+    .menu,.social {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .menu_mobile.abrir {
+        visibility: visible;
+        height: calc(100vh - 80px);
+        left: 0;
+    }
+    
 }
