@@ -189,11 +189,11 @@ i:hover {
 
 .foot_menu ul {
     width: 90%;
-    margin-top: 50px;
+    margin-top: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .foot_menu ul li {
@@ -329,8 +329,7 @@ div.escolha_entrar ul {
 }
 
 div.escolha_entrar ul li {
-    width: 330px;
-    padding: 15px 24px;
+    padding: 20px;
 }
 
 /* MAIN */
@@ -743,6 +742,26 @@ Grandes telas: acima de 1200px
 */
 
 /* MEDIA QUERY - TELAS GRANDES */
+@media screen and (min-width: 420px) and (max-width: 770px) {
+    
+    .grupo_cursos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .grupo_cursos h2 {
+        display: block;
+        width: 100%;
+    }
+
+    .grupo_cursos > div {
+        width: 350px;
+    }
+    
+}
+
 @media screen and (min-width: 770px) and (max-width: 992px) { 
 
     #div2 {

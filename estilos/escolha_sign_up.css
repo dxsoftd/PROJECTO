@@ -26,127 +26,324 @@
     font-family: var(--font1);
 }
 
-body {
+html,body {
+    width: 100%;
     height: 100vh;
-    width: 100%;
-    background: var(--cor_media) url('../img/paisagem03.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
-/* JANELA DE APRESENTAÇÃO */
-.window_after_body {
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(10px);
+body {
+    overflow-x: hidden;
 }
 
-/* DIV DE INTRODUÇÃO À REDE SOCIAL */
-.window_after_body > div {
-    height: 300px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-/* ACESSÓRIOS DA MINHA DIV DE INTRODUÇÃO */
-.window_after_body h1 {
+/* BOTÃO DE LOGIN */
+header .login i {
+    padding: 5px;
     color: var(--cor_escura);
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: var(--cor_branca);
+    border-radius: 6px;
 }
 
-.window_after_body p {
-    font-size: 14px;
-    text-indent: 0px;
-    color: var(--cor_branca);
+header h1 {
+    font-size: 30px;
 }
 
-/* LISTA */
-ul {
-    list-style-type: none;
+/* CONTAINER DOS BENEFÍCIOS */
+/* #d8dce0 */
+.container_beneficios {
+    background-color: rgb(246, 246, 246);
 }
 
-ul > li {
+
+/* BENEFÍCIOS */
+.beneficio {
     width: 100%;
-    height: 300px;
-    background-color: var(--cor_media);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cor_branca);
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
+    padding: 20px;
+    overflow: hidden;
 }
 
-/* OFUSCADOR */
-.sombra {
-    background-color: var(--cor_back1);
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.parte_da_escrita {
+    
+}
+
+.parte_da_escrita h3 {
     text-transform: uppercase;
 }
 
-.jogos_de_estudo {
-    background-image: url('../img/informatica1.jpg');
-}
+.parte_da_escrita hr, .container_vantagens hr {
+    height: 1px;
+    width: 100px;
 
-.chat {
-    background-image: url('../img/caderno\ em\ branco.jpg');
-}
-
-.aproveitamento_escolar {
-    background-image: url('../img/alunos_na_relva.jpg');
-}
-
-.cantina_escolar {
-    background-image: url('../img/burger.jpg');
-}
-
-/* BOTÕES DE ESCOLHA */
-.escolha_sign_up {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.escolha_sign_up > h2 {
-    margin-bottom: 50px;
-}
-
-.escolha_sign_up > button {
-    height: 100px;
-    width: 150px;
-
-    padding: 10px;
-    margin-bottom: 20px;
-
-    border-radius: 5px;
+    margin: 10px 0px;
+    outline: none;
     border: none;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.495);
+
     background-color: var(--cor_escura);
 }
 
-.escolha_sign_up > button > a {
-    color: var(--cor_branca);
-    font-weight: lighter;
+.container_vantagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-top: 200px;
+    margin: 50px auto;
+}
+
+.container_vantagens hr {
+    margin: 5px 0px;
+    background-color: var(--cor_azul);
+}
+
+.container_vantagens p {
+    font-size: 20px;
+    color: rgb(107, 107, 107);
+    text-align: center;
+    text-indent: 0px;
+}
+
+.container_vantagens p strong {
+    color: var(--cor_preta);
+    font-weight: 600;
+}
+
+.container_vantagens p mark {
+    background-color: var(--cor_escura);
+}
+
+.parte_da_escrita p {
+    color: rgb(107, 107, 107);
+    text-align: justify;
+    text-indent: 0px;
+}
+
+.parte_da_imagem {
+    margin-left: auto;
+    margin-top: 20px;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+
+    border-radius: 6px;
+    box-shadow: -10px -10px 0px var(--cor_escura);
+}
+
+.container_beneficios .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_beneficios .texto .big_letter {
+    color: rgb(51, 51, 51);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container_beneficios .texto .small_letter {
+    color: var(--cor_preta);
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* IMAGENS DOS BENEFÍCIOS */
+.parte_da_imagem > .jogo {
+    width: 100%;
+    height: 100%;
+
+    background: var(--cor_escura) url('../img/informatica1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.parte_da_imagem > .cantina {
+    width: 100%;
+    height: 100%;
+
+    background: var(--cor_escura) url('../img/burger.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.parte_da_imagem > .chat {
+    width: 100%;
+    height: 100%;
+
+    background: var(--cor_escura) url('../img/aperto_de_mao.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.parte_da_imagem > .notas {
+    width: 100%;
+    height: 100%;
+
+    background: var(--cor_escura) url('../img/caderno\ em\ branco.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 
+/* ESBOÇO - CRIAR CONTA */
+.criar_conta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
 
+.container_beneficios .texto p {
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0px;
+}
 
+.criar_conta a {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--cor_back1);
+    color: var(--cor_branca);
+    background-color: var(--cor_escura);
+    margin: 10px 0px;
+    transition: all .3s ease-in-out;
+}
 
+.criar_conta a:hover {
+    color: rgb(51, 51, 51);
+    background-color: #efae5f;
+    text-decoration: none;
+}
 
+.bg_decoracao {
+    width: 100%;
+    height: 400px;
+}
 
+.criar_conta .bg_decoracao:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
+    background-color: var(--cor_escura);
+    position: relative;
+    z-index: -1;    
+}
+
+.criar_conta .container_botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 95%;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    overflow: hidden;
+
+    background: var(--cor_azul) url('../img/esboco.avif');
+
+    position: absolute;
+    top: 50%;
+}
+
+.criar_conta .container_botoes .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.742);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header #div1 {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header #div1 h1 {
+        display: block;
+    }
+    
+    .container_beneficios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .beneficio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        margin: 60px 0px;
+    }
+
+    .beneficio:nth-child(1), .beneficio:nth-child(3){
+        flex-direction: row;
+    }
+
+    .beneficio:nth-child(2), .beneficio:nth-child(4){
+        flex-direction: row-reverse;
+    }
+
+    .parte_da_escrita {
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+    }
+
+    .parte_da_escrita h3 {
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    .parte_da_escrita hr {
+        width: 150px;
+        height: 2px;
+    }
+
+    .parte_da_escrita p {
+        font-size: 22px;
+    }
+
+    .parte_da_imagem{
+        width: 50%;
+        height: 100%;
+    }
+
+    .criar_conta {
+        width: 100%;
+        height: 800px;
+    }
+
+    .botoes {
+        width: 100%;
+        height: 800px;
+    }
+
+    .botoes a {
+        height: 100px;
+        width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (min-width) {
+
+}

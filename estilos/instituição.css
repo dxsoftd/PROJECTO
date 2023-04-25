@@ -51,19 +51,23 @@
 
 /* IMAGEM DA INSTITUIÇÃO */
 #imagem_da_escola {
-    background: transparent url('../img/paisagem03.jpg') no-repeat center center;
-    background-size: cover;
-    height: 200px;
-    width: 300px;
-    border-radius: 2px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.286);
+    max-height: 200px;
+    max-width: 300px;
+    border-radius: 5px;
     margin: auto;
     margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.imagem_da_escola img {
+    max-width: 200px;
+    max-width: 350px;
+    border-radius: 5px;
 }
 
 .imagem_do_padroeiro {
-    height: 200px;
-    width: 300px;
+    max-height: 200px;
+    max-width: 300px;
     border-radius: 5px;
     margin: auto;
     margin-bottom: 20px;
@@ -71,8 +75,8 @@
 }
 
 .imagem_do_padroeiro img {
-    height: 200px;
-    width: 350px;
+    min-height: 200px;
+    max-width: 350px;
     border-radius: 5px;
 }
 
@@ -103,6 +107,7 @@
 .eventos {
     width: 100%;
     padding: 0px 30px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,8 +122,8 @@
 }
 
 .eventos .img-eventos {
-    width: 305px;
     height: 305px;
+    width: 305px;
     background-color: var(--cor_escura);
     margin-bottom: 20px;
     display: flex;
@@ -263,7 +268,6 @@
 }
 
 /* MEDIA QUERY */
-
 @media screen and (min-width: 840px) and (max-width: 992px) {
 
     .back5 {
@@ -412,3 +416,79 @@
 
 }
 
+@media screen and (min-width: 625px) and (max-width: 900px) {
+    
+    .grupo-recursos > .recursos {
+        width: 600px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .grupo-recursos > .recursos > .descricao_do_recurso {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 200px) {
+
+    .back5 p {
+        text-align: left;
+    }
+
+    .grupo-recursos {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .grupo-recursos > h2,hr,p {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .grupo-recursos .recursos {
+        width: 300px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        outline: 1px solid #d8dce0;
+        border-radius: 10px;
+        cursor: pointer;
+
+        transition: all .5s ease-in-out;
+    }
+
+    .grupo-recursos .recursos:hover {
+        box-shadow: -10px -20px 0px #f2a341;
+        outline: 2px solid var(--cor_azul);
+    }
+
+    .grupo-recursos .recursos .descricao_do_recurso {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+
+    .grupo-recursos .recursos {
+        height: 300px;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 328px){
+    
+
+    .eventos {
+        padding: 0px;
+    }
+
+    .eventos .img-eventos {
+        width: 97%;
+        height: 320px;
+    }
+
+}

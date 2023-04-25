@@ -40,6 +40,7 @@ main h2 {
 #backfoto1 {
     background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat center center fixed;
     background-size: cover;
+    height: 500px;
 }
 
 /* OFUSCADOR1 */
@@ -47,6 +48,11 @@ main h2 {
     background-color: rgba(0, 0, 0, 0.313);
     padding: 15px;
     margin-bottom: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* FUNDO DA ÁREA DOCENTE */

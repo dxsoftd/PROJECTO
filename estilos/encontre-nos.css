@@ -26,10 +26,19 @@
     font-family: var(--font1);
 }
 
-.principal_background {
-    height: 500px;
+html,body {
+    height: 100vh;
     width: 100%;
-    background: rgba(0, 0, 0, 0.479) url('../img/paisagem04.jpg') no-repeat center center;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.principal_background {
+    height: 600px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.479) url('../img/paisagem01.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -58,7 +67,12 @@
 }
 
 .container_servicos {
-    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 20px;
 }
 
 .container_servicos h3 {
@@ -75,6 +89,20 @@
     margin-bottom: 20px;
     height: 400px;
     width: 400px;
+    border: 1px solid var(--cor_azul);
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px var(--cor_escura);
+    margin: 10px 0px;
+
+    transition: all .3s ease-in-out;
+}
+
+.container_servicos .servicos:first-child {
+    margin-top: 40px;
+}
+
+.container_servicos .servicos:last-child {
+    margin-bottom: 40px;
 }
 
 .servicos hr {
@@ -97,24 +125,64 @@
 }
 
 .container_enderecos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    overflow: hidden;
-    width: 100%;
+    padding: 0px 20px;
 }
 
 .endereco {
-    width: 95%;
-    color: var(--cor_preta);
+    transition: all .3s ease-in-out;
+}
+
+.endereco  h3 {
+    text-align: center;
+    color: var(--cor_escura);
+    font-size: 40px;
 }
 
 .endereco iframe {
     width: 100%;
     height: 500px;
     border-radius: 10px;
+}
+
+aside p {
+    color: var(--cor_preta);
+    text-indent: 0px;
+    text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 328px){
+
+    .container_servicos {
+        padding: 0px;
+    }
+
+    .container_servicos .servicos {
+        width: 97%;
+        height: 320px;
+    }
+
+    .container_enderecos {
+        padding: 0px;
+    }
+
+    .container_enderecos .endereco {
+        width: 97%;
+        height: 320px;
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+
+    .container_servicos {
+        padding: 0px;
+    }
+
+    .container_servicos .servicos {
+        width: 97%;
+        height: 320px;
+    }
+
 }
 
 
