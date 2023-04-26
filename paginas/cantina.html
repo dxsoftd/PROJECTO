@@ -4,9 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantina escolar</title>
-</head>
-<body>
+    <title>CANTINA</title>
+
+    <!-- LINK PARA O HAMBURGUER -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
+    <!-- LINK PARA REDES SOCIAS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- LINK PARA FAVICON -->
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    
+    <!-- LINK PARA ESTILOS -->
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/cantina.css">
+</head>
+<body onresize="size()">
+    
+    <header>
+
+        <div id="div1">
+            <img src="../img/logo.png" alt="logo">
+            <h1>CANTINA</h1>
+            <img src="../img/menu1.webp" alt="logo"id="iburger" onclick="menu_openned()">
+        </div>
+
+        <div id="div2">
+
+            <menu id="menu">
+
+                <ul>
+                    <li><a href="inicio.html">CASA</a></li>
+                    <li><a href="instituição.html">INSTITUIÇÃO</a></li>
+                    <li><a href="corpo-docente.html">DOCENTES</a></li>
+                    <li><a href="encontre-nos.html">ENCONTRE-NOS</a></li>
+                    <li><a href="noticias.html">NOTÍCIAS</a></li>
+                    <li><a href="secretaria.html">SECRETARIA</a></li>
+                </ul>
+
+                <div class="container_button_menu">
+                    <button class="button_menu" onclick="escolha_entrar()" onmouseenter="escolha_entrar()"> ENTRAR <i class="material-icons" id="icone_abrir" >expand_more</i> </button>
+
+                    
+                    <div class="escolha_entrar">
+
+                        <ul>
+                            <li>Criar conta</li>
+                            <li>Iniciar sessão</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </menu>
+
+        </div>
+
+        <div id="div3">
+
+            <menu id="menu">
+
+                <div class="head_menu">
+
+                    <h2>Menu</h2>
+                    <img src="../img/menu1.webp" alt="logo"id="iburger" onclick="menu_openned()">
+                    
+                </div>
+
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="inicio.html">Casa</a></li>
+                        <li><a href="instituição.html">Instituição</a></li>
+                        <li><a href="corpo-docente.html">Docentes</a></li>
+                        <li><a href="encontre-nos.html">Encontre-nos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="secretaria.html">Secretaria</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot_menu">
+                    <ul>
+                        <li><a href="escolha_sign_up.html">Criar conta</a></li>
+                        <li><a href="sing_in.html">Iniciar sessão</a></li>
+                    </ul>
+                </div>
+
+            </menu>
+
+        </div>
+
+
+    </header>
+    
+    <main>
+
+        <div class="panfleto">
+
+            <div class="sombra">
+                <h2>Cantina escolar</h2>
+                <p>Uma oferta alargada e diversificada pensada para ir ao encontro das necessidades e expectativas dos nossos alunos diariamente.</p>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <!-- BEBIDAS -->
+            <div class="categoria_da_comida">
+
+                <div class="imagem_da_categoria">
+                    <div class="bebidas"></div>
+                </div>
+
+                <div class="nome_da_categoria">
+                    <h3>Bebidas</h3>
+                    <p>O clássico para um dia ensolarado!</p>
+                </div>
+
+                <div class="container_ver_mais">
+                    <a href="categorias-cantina/bebidas.html" class="ver_mais">Ver mais</a>
+                </div>
+
+            </div>
+
+            <!-- BOLACHAS -->
+            <div class="categoria_da_comida">
+
+                <div class="imagem_da_categoria">
+                    <div class="bolachas"></div>
+                </div>
+
+                <div class="nome_da_categoria">
+                    <h3>Bolachas</h3>
+                    <p>Acompanhado de um sumo ou refrigerante, sempre fez bem, uhmm!!</p>
+                </div>
+
+                <div class="container_ver_mais">
+                    <a href="categorias-cantina/bolachas.html" class="ver_mais">Ver mais</a>
+                </div>
+
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="categoria_da_comida">
+
+                <div class="imagem_da_categoria">
+                    <div class="doces"></div>
+                </div>
+
+                <div class="nome_da_categoria">
+                    <h3>Doces</h3>
+                    <p>Vale a pena para descontrair e pensar em novas ideias!</p>
+                </div>
+
+                <div class="container_ver_mais">
+                    <a href="categorias-cantina/doces.html" class="ver_mais">Ver mais</a>
+                </div>
+
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="categoria_da_comida">
+
+                <div class="imagem_da_categoria">
+                    <div class="refeicoes"></div>
+                </div>
+
+                <div class="nome_da_categoria">
+                    <h3>Refeições</h3>
+                    <p>Provei e me fascinei. Aperta em <strong>ver mais</strong> para ver as refeições...</p>
+                </div>
+
+                <div class="container_ver_mais">
+                    <a href="categorias-cantina/bebidas.html" class="ver_mais">Ver mais</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>created with <i class="material-icons">favorite</i> by <strong>D(x)Soft</strong></p>
+    </footer>
+    
+    
+    <script src="../animações/menu.js"></script>
 </body>
 </html>

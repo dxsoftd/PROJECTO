@@ -93,12 +93,16 @@ header h1 {
     align-items: center;
     justify-content: center;
     width: 80%;
-    padding-top: 200px;
+    padding: 100px 0px;
     margin: 50px auto;
 }
 
+.container_vantagens h2 {
+    margin: 0px;
+}
+
 .container_vantagens hr {
-    margin: 5px 0px;
+    margin-bottom: 15px;
     background-color: var(--cor_azul);
 }
 

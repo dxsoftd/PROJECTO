@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    --font2: 'Sigmar', cursive;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÕEOS GERAIS */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    position: relative;
+}
+
+/* CABEÇALHO */
+header {
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    background-color: var(--cor_branca);
+    box-shadow: 0px 10px 20px #0d0d0d36;
+}
+
+#div1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header img {
+    height: 50px;
+}
+
+/* PANFLETO */
+.panfleto {
+    background: var(--cor_branca) url('../img/cantina02.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 490px;
+    margin-bottom: 60px;
+}
+
+.panfleto .sombra {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.panfleto .sombra h2 {
+    color: var(--cor_branca);
+    text-transform: uppercase;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.panfleto .sombra p {
+    font-size: 12px;
+    color: var(--cor_branca);
+    text-align: center;
+    text-indent: 0px;
+    width: 300px;
+}
+
+main {
+    background-color: #FAF9F8;
+}
+
+/* CONTAINER DAS CATEGORIAS DE COMIDA */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.categoria_da_comida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 330px;
+    width: 330px;
+    margin: 15px 5px;
+
+    background-color: var(--cor_branca);
+    box-shadow: 0px 10px 20px #0d0d0d36;
+    border-radius: 20px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: all .3s ease-in-out;
+}
+
+.categoria_da_comida:active {
+    width: 290px;
+    height: 290px;
+}
+
+.categoria_da_comida > div {
+    height: calc(100% / 3);
+    width: 100%;
+}
+
+/* ELEMENTOS DAS CATEGORIAS */
+.imagem_da_categoria {
+    width: 100%;
+    background-color: transparent;
+}
+
+.imagem_da_categoria > div {
+    height: 100%;
+    width: 100%;
+}
+
+.nome_da_categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome_da_categoria h3 {
+    font-size: 25px;
+    color: var(--cor_preta);
+    margin-bottom: 15px;
+}
+
+.nome_da_categoria p {
+    font-size: 15px;
+    text-align: center;
+    color: rgb(107, 107, 107);
+}
+
+.nome_da_categoria p strong {
+    color: var(--cor_preta);
+}
+
+.container_ver_mais {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_ver_mais .ver_mais {
+    padding: 10px 26px;
+    border: 1px solid var(--cor_escura);
+    border-radius: 20px;
+}
+
+/* IMAGENS DAS CATEGORIAS */
+.bebidas {
+    background: transparent url('../img/bebidas.jpg') no-repeat center center;
+    background-size: 420px;
+    transition: all .5s ease-in-out;
+}
+
+.categoria_da_comida:hover .bebidas{
+    background-size: 520px;
+}
+
+.bolachas {
+    background: transparent url('../img/bolachas.webp') no-repeat center center;
+    background-size: 370px;
+    transition: all .5s ease-in-out;
+}
+
+.categoria_da_comida:hover .bolachas {
+    background-size: 470px;
+}
+
+.doces {
+    background: transparent url('../img/doces.jpg') no-repeat center center;
+    background-size: 350px;
+    transition: all .5s ease-in-out;
+}
+
+.categoria_da_comida:hover .doces {
+    background-size: 450px;
+}
+
+.refeicoes {
+    background: transparent url('../img/refeicoes.jpg') no-repeat center center;
+    background-size: 460px;
+    transition: all .5s ease-in-out;
+}
+
+.categoria_da_comida:hover .refeicoes {
+    background-size: 560px;
+}
+
+footer {
+    margin-top: 100px;
+    height: 30px;
+    padding: 0px;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer i {
+    color: red;
+    animation: love 1.5s normal infinite forwards;
+}
+
+@keyframes love {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    
+    /* CONTAINER DAS CATEGORIAS DE COMIDA */
+    .container {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .categoria_da_comida {
+        width: 400px;
+        height: 400px;
+    }
+
+    .categoria_da_comida:active {
+        width: 390px;
+        height: 390px;
+    }
+
+    /* IMAGENS DAS CATEGORIAS */
+    .bebidas {
+        background: transparent url('../img/bebidas.jpg') no-repeat center center;
+        background-size: 420px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .categoria_da_comida:hover .bebidas{
+        background-size: 520px;
+    }
+    
+    .bolachas {
+        background: transparent url('../img/bolachas.webp') no-repeat center center;
+        background-size: 400px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .categoria_da_comida:hover .bolachas {
+        background-size: 500px;
+    }
+    
+    .doces {
+        background: transparent url('../img/doces.jpg') no-repeat center center;
+        background-size: 400px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .categoria_da_comida:hover .doces {
+        background-size: 500px;
+    }
+    
+    .refeicoes {
+        background: transparent url('../img/refeicoes.jpg') no-repeat center center;
+        background-size: 460px;
+        transition: all .5s ease-in-out;
+    }
+    
+    .categoria_da_comida:hover .refeicoes {
+        background-size: 560px;
+    }
+
+}

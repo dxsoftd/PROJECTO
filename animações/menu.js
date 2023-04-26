@@ -3,6 +3,7 @@
 //VARIÁVEIS
 var icone1 = window.document.getElementById('iburger1')
 var icone2 = window.document.getElementById('iburger2')
+var img_menu = window.document.getElementById('iburger')
 
 //FUNÇÃO PARA AJUDAR NO FUNCIONAMENTO DO MENU
 function size(){
