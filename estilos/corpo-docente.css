@@ -647,7 +647,8 @@ Grandes telas: acima de 1200px
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
-    #back4 h2 {
+    #back3 h2{
+        font-size: 50px;
         width: 100%;
     }
 
@@ -671,6 +672,10 @@ Grandes telas: acima de 1200px
 }
 
 @media screen and (min-width: 1200px) {
+
+    #back3 h2{
+        font-size: 50px;
+    }
 
     #back4 h2 {
         width: 100%;
