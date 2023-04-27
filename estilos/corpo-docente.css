@@ -38,21 +38,21 @@ main h2 {
 }
 
 #backfoto1 {
-    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat center center fixed;
+    height: 600px;
+    background: var(--cor_escura) url('../img/doc-foto1.jpg') no-repeat top center fixed;
     background-size: cover;
-    height: 500px;
 }
 
 /* OFUSCADOR1 */
 #back3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
     background-color: rgba(0, 0, 0, 0.313);
     padding: 15px;
     margin-bottom: 20px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* FUNDO DA ÁREA DOCENTE */
@@ -77,7 +77,11 @@ Grandes telas: acima de 1200px
     width: 100%;
 }
 
-.grupo_doc {
+.grupo_doc1 {
+    display: none;
+}
+
+.grupo_doc2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +94,7 @@ Grandes telas: acima de 1200px
 }
 
 /* CONFIGURAÇÕES GERAIS DOS PROFESSORES */
-.grupo_doc .docentes {
+.grupo_doc2 .docentes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,7 +106,7 @@ Grandes telas: acima de 1200px
     width: 100%;
 }
 
-.grupo_doc .docentes .picture_doc {
+.grupo_doc2 .docentes .picture_doc {
     height: 150px;
     width: 150px;
     margin: auto;
@@ -110,7 +114,7 @@ Grandes telas: acima de 1200px
     transition: 0.3s ease-in-out;
 }
 
-.grupo_doc .docentes .info_doc {
+.grupo_doc2 .docentes .info_doc {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -119,11 +123,18 @@ Grandes telas: acima de 1200px
     text-align: left;
 }
 
-.grupo_doc > .container_doc > .docentes > .info_doc h4{
+.grupo_doc2 > .container_doc > .docentes > .info_doc h4{
     color: var(--cor_escura);
 }
 
 /* PARTE DAS FOTOS DOS PROFESSORES */
+#Adriano_Chicunha{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
 #boares_gunza {
     background: var(--cor_escura) url('../img/boares_gunza.jpg') no-repeat center center;
     background-size: cover;
@@ -131,31 +142,49 @@ Grandes telas: acima de 1200px
     height: 150px;
     width: 150px;
 }
-
-#jose_tumbo {
-    background: var(--cor_escura) url('../img/jose_tumbo.jpg') no-repeat center center;
+#Geovani_Pedro{
+    background: var(--cor_escura) url('../img/Geovani_Pedro.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     height: 150px;
     width: 150px;
 }
-
-#costa_gaspar {
-    background: var(--cor_escura) url('../img/costa_gaspar\ \(2\).jpg') no-repeat top center;
+#Marlene_Joaquim{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     height: 150px;
     width: 150px;
 }
-
-#antonio_cambanda {
-    background: var(--cor_escura) url('../img/antonio_cambanda.jpg') no-repeat center center;
+#Osvaldo_Kissoki{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     height: 150px;
     width: 150px;
 }
-
+                       
+#Sandra_Macassonge{
+    background: var(--cor_escura) url('../img/Sandra_Macassonge.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Hilário_Afonso{
+    background: var(--cor_escura) url('../img/Hilário_Afonso.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Bobó_Artur{
+    background: var(--cor_escura) url('../img/Bobó_Artur.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
 #aderito_ebo {
     background: var(--cor_escura) url('../img/aderito_ebo.jpg') no-repeat center center;
     background-size: cover;
@@ -163,27 +192,442 @@ Grandes telas: acima de 1200px
     height: 150px;
     width: 150px;
 }
+#Aldário_Da_Costa{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Amélia_Kambongue{
+    background: var(--cor_escura) url('../img/Amélia_Kambongue.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Angela_Ferreira{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#antonio_cambanda {
+    background: var(--cor_escura) url('../img/antonio_cambanda.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Aristides_De_Sousa{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Augusto_Bige{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Belmiro_Bebeca{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Bernardo_Luemba {
+    background: var(--cor_escura) url('../img/Bernardo_Luamba.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Cleópatra_Silva{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Cristina_Boa{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#costa_gaspar {
+    background: var(--cor_escura) url('../img/costa_gaspar\ \(2\).jpg') no-repeat top center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Cristina_Moreira{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Dário_Jovete {
+    background: var(--cor_escura) url('../img/Dário_Jovete.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Domingos_Narciso{
+    background: var(--cor_escura) url('../img/Domingos_Narciso.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Domingos_Uchila{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Domingos_Kissanga{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Elias_David {
+    background: var(--cor_escura) url('../img/Elias_David.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Elizandra_Lourenço{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Emanuel_kissoka{
+    background: var(--cor_escura) url('../img/José_Cambonge.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;  
+}
+#Emir_Francisco{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Fernando_Mateus{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Flávio_Gaspar{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Francisco_Bento{
+    background: var(--cor_escura) url('../img/Francisco_Bento.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Francisco_Congo{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Generosa_da_Costa{
+    background: var(--cor_escura) url('../img/Generosa_da_Costa.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Gildo_João{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Gleizer_Sapalo{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Helder_Domingos {
+    background: var(--cor_escura) url('../img/Helder.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#Helmer_Capassola{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Isidoro_Muabi{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#José_Cambonge{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#José_Sebastião{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#João_Pedro{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#jose_tumbo {
+    background: var(--cor_escura) url('../img/jose_tumbo.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Luciano_Alfredo{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Luís_Marques{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Luzia_Da_Cruz{
+    background: var(--cor_escura) url('../img/Luzia_Da_Cruz.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Manuel_Domingos{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Manuel_Zombo{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Maria_Afonso{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Maria_Amilcar{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Marinela_Correia{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Mário_Nzangi{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Mbigi_Nzamba{
+    background: var(--cor_escura) url('../img/Mbigi_Nzamba.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Miguel_Costa{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Mfumu_Nzingui{
+    background: var(--cor_escura) url('../img/Mfumu_Nzingui.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Nastejo_Capitão{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Necas_Pululo{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Nice_Ramalheira{
+    background: var(--cor_escura) url('../img/Nice_Ramalheira.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Paulina_Makambua{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Paulo_Muxinda{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Pedro_Medina{
+    background: var(--cor_escura) url('../img/Pedro_Medina.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Quioza_Canguila{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Rafael_Soqui{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Samuel_Tanduyan{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Tando_Miguel{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Vandriel_Campos{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Venâncio_Miguel{
+    background: var(--cor_escura) url('../img/Todos.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+#Vigílio_Moma{
+    background: var(--cor_escura) url('../img/Vigílio_Moma.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
 
 /* PARTE DESCRITIVA DOS PROFESSORES */
-.grupo_doc .docentes .info_doc {
+.grupo_doc2 .docentes .info_doc {
     margin-top: 15px;
     line-height: 30px;
 }
 
-.grupo_doc .docentes h4 {
+.grupo_doc2 .docentes h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
 }
 
-.docentes span {
+.grupo_doc2 .docentes span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
     font-weight: 500;
 }
 
-.grupo_doc .docentes span::after {
+.grupo_doc2 .docentes span::after {
     content: ' ';
     display: block;
     width: 50px;
@@ -192,7 +636,7 @@ Grandes telas: acima de 1200px
     top: 10px;
 }
 
-.grupo_doc .docentes p {
+.grupo_doc2 .docentes p {
     margin-top: 10px;
     font-size: 14px;
     text-indent: 0px;
@@ -201,103 +645,13 @@ Grandes telas: acima de 1200px
 
 /* MEDIA QUERY */
 
-@media  screen and (min-width: 840px) and (max-width: 992px) {
-
-    #backfoto1 {
-        height: 560px;
-        background-size: cover;
-        background-position: center center;
-    }
-    
-    #back3 {
-        height: 560px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
-        background-color: rgba(0, 0, 0, 0.598);
-    }
-
-    #back3 > h2 {
-        font-size: 60px;
-        text-align: left;
-    }
-
-    #back3 > p {
-        font-size: 14px;
-        text-align: left;
-        margin-top: 10px;
-        text-indent: 0px;
-        width: 700px;
-    }
-
-    #back4 h2 {
-        width: 100%;
-        font-size: 40px;
-        margin-top: 50px;
-    }
-
-    .grupo_doc {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .container_doc {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .container_doc > .docentes{
-        width: 350px;
-        overflow: hidden;
-    }
-
-}
-
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
-    /* HEADER */
-    #backfoto1 {
-        height: 560px;
-        background-size: cover;
-        background-position: center center;
-    }
-    
-    #back3 {
-        height: 560px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
-        background-color: rgba(0, 0, 0, 0.598);
-    }
-
-    #back3 > h2 {
-        font-size: 60px;
-        text-align: left;
-    }
-
-    #back3 > p {
-        font-size: 14px;
-        text-align: left;
-        margin-top: 10px;
-        text-indent: 0px;
-        width: 700px;
-    }
-
     #back4 h2 {
         width: 100%;
-        font-size: 40px;
-        margin-top: 50px;
     }
 
-    .grupo_doc {
+    .grupo_doc2 {
         width: 100%;
         padding: 30px;
     }
@@ -306,11 +660,11 @@ Grandes telas: acima de 1200px
         width: 90%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .container_doc > .docentes{
-        width: 350px;
+        width: 250px;
         overflow: hidden;
     }
 
@@ -318,44 +672,11 @@ Grandes telas: acima de 1200px
 
 @media screen and (min-width: 1200px) {
 
-    /* HEADER */
-    #backfoto1 {
-        height: 560px;
-        background-size: cover;
-        background-position: center center;
-    }
-    
-    #back3 {
-        height: 560px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
-        background-color: rgba(0, 0, 0, 0.598);
-    }
-
-    #back3 > h2 {
-        font-size: 60px;
-        text-align: left;
-    }
-
-    #back3 > p {
-        font-size: 14px;
-        text-align: left;
-        margin-top: 10px;
-        text-indent: 0px;
-        width: 700px;
-    }
-
     #back4 h2 {
         width: 100%;
-        font-size: 40px;
-        margin-top: 50px;
     }
 
-    .grupo_doc {
+    .grupo_doc2 {
         width: 100%;
         padding: 30px;
     }
