@@ -1142,7 +1142,8 @@ Grandes telas: acima de 1200px
     }
 
     .container_button_menu .button_menu:hover {
-        box-shadow: 0px 0px 20px #008FF2;
+        background-color: var(--cor_branca);
+        box-shadow: -5px -5px 0px var(--cor_escura);
     }
 
     .container_button_menu .button_menu i {
@@ -1155,6 +1156,17 @@ Grandes telas: acima de 1200px
 
     #div3 {
         display: none;
+    }
+
+    .ddf_school {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .ddf_school li {
+        cursor: pointer;
     }
 
 }

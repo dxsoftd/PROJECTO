@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina / bebidas</title>
+    <link rel="stylesheet" href="../../estilos/inicio.css">
+    <link rel="stylesheet" href="../../estilos/cantina.css">
+    <link rel="stylesheet" href="../../estilos/bebidas.css">
+</head>
+<body id="body">
+    
+    <header>
+
+        <div id="div1">
+            <img src="../../img/logo.png" alt="logo">
+            <h1>CANTINA</h1>
+            <img src="../../img/menu1.webp" alt="logo"id="iburger" onclick="menu_openned()">
+        </div>
+
+        <div id="div2">
+
+            <menu id="menu">
+
+                <ul>
+                    <li><a href="inicio.html">CASA</a></li>
+                    <li><a href="instituição.html">INSTITUIÇÃO</a></li>
+                    <li><a href="corpo-docente.html">DOCENTES</a></li>
+                    <li><a href="encontre-nos.html">ENCONTRE-NOS</a></li>
+                    <li><a href="noticias.html">NOTÍCIAS</a></li>
+                    <li><a href="secretaria.html">SECRETARIA</a></li>
+                </ul>
+
+                <div class="container_button_menu">
+                    <button class="button_menu" onclick="escolha_entrar()" onmouseenter="escolha_entrar()"> ENTRAR <i class="material-icons" id="icone_abrir" >expand_more</i> </button>
+
+                    
+                    <div class="escolha_entrar">
+
+                        <ul>
+                            <li>Criar conta</li>
+                            <li>Iniciar sessão</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </menu>
+
+        </div>
+
+        <div id="div3">
+
+            <menu id="menu">
+
+                <div class="head_menu">
+
+                    <h2>Menu</h2>
+                    <img src="../../img/menu1.webp" alt="logo"id="iburger" onclick="menu_openned()">
+                    
+                </div>
+
+                <div class="main_menu">
+                    <ul>
+                        <li><a href="../cantina.html">Home | cantina</a></li>
+                        <li><a href="../sing_in.html">Home | DDF-SCHOOL</a></li>
+                    </ul>
+                </div>
+                <div class="carrinho">
+
+                </div>
+
+            </menu>
+
+        </div>
+
+
+    </header>
+
+    <main>
+        <div class="titulo">
+            <h2>bebidas</h2>
+        </div>
+        <div id="container_produtos">
+        </div>
+    </main>
+
+    <script src="../../animações/menu.js"></script>
+    <script src="../../animações/carrinho_cantina.js"></script>
+</body>
+</html>

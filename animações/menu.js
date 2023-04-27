@@ -3,7 +3,7 @@
 //VARIÁVEIS
 var icone1 = window.document.getElementById('iburger1')
 var icone2 = window.document.getElementById('iburger2')
-var img_menu = window.document.getElementById('iburger')
+var escolha_entrar = window.document.getElementById('abrir')
 
 //FUNÇÃO PARA AJUDAR NO FUNCIONAMENTO DO MENU
 function size(){
@@ -30,5 +30,18 @@ function menu_openned(){
         div3.style.display = 'block'
         icone1.innerHTML = 'close'
         icone2.innerHTML = 'close'
+    }
+}
+
+escolha_entrar.style.display = 'none'
+function escolha_entrar1() {
+    if(escolha_entrar.style.display == 'none'){
+        escolha_entrar.style.display = 'block'
+    }
+}
+
+function escolha_entrar2() {
+    if(escolha_entrar.style.display == 'none'){
+        escolha_entrar.style.display = 'block'
     }
 }
