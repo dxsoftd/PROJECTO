@@ -63,6 +63,8 @@ header, header.rolando {
     font-size: 30px;
     font-weight: 100;
     color: var(--cor_branca);
+
+    cursor: pointer;
 }
 
 #div1 h1:hover {
@@ -151,7 +153,7 @@ main {
     width: 100%;
     height: 190px;
 
-    background: transparent url('../img/padre.jpg') no-repeat center center;
+    background: transparent url('../img/cadernos1.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -213,6 +215,10 @@ main {
     text-decoration: none;
 }
 
+.outras_noticias a:hover {
+    text-decoration: none;
+}
+
 /* NOTÍCIAS */
 .outras_noticias .noticias{
     display: flex;
@@ -223,11 +229,10 @@ main {
     width: 100%;
     height: 100px;
     padding: 10px 5px;
-    margin: 5px;
+    margin: 0px;
 
     background-color: transparent;
     border-top: 1px solid #e6e9ed;
-    border-bottom: 1px solid #e6e9ed;
 
     overflow: hidden;
 }
@@ -240,15 +245,6 @@ main {
     background-color: #f2bb13;
 
     overflow: hidden;
-}
-
-/* IMAGENS DAS NOTÍCIAS */
-.direitora_pedagogica {
-    width: 100%;
-    height: 100%;
-
-    background: transparent url('../img/dp1.jpg') no-repeat center center;
-    background-size: cover;
 }
 
 /* PARTE DA CATEGORIA INFORMATIVA E DO TÍTULO DA NOTÍCIA */
@@ -275,7 +271,6 @@ main {
 
 .outras_noticias .noticias .parte_texto .titulo {
     width: 100%;
-    margin-bottom: 10px;
 
     color: var(--cor_preta);
     font-family: var(--font2);
@@ -283,4 +278,37 @@ main {
     text-align: left;
     text-indent: 0px;
     text-decoration: none;
+}
+
+/* NOTÍCIA A SER LIDA */
+
+/* PARTE DA IMAGEM */
+.container_noticia .lendo_noticia .imagem {
+    width: 100%;
+    height: 190px;
+}
+
+/* IMAGENS DAS NOTÍCIAS */
+.dp28_04_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/dp1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.padre28_04_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/padre.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.alunos_na_missa28_04_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/maos_de_aluno_na_missa.jpg') no-repeat center center;
+    background-size: cover;
 }
