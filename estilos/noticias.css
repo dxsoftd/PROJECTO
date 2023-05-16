@@ -127,8 +127,22 @@ header, header.rolando {
 
 /* CORPO PRINCIPAL - MAIN */
 main {
-    width: 100%;
     overflow: hidden;
+}
+
+.main_recentes {
+    max-width: 700px;
+    margin: auto;
+}
+
+.main_informacao_a_ser_lida {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.main_convocatórias {
+    max-width: 700px;
+    margin: auto;
 }
 
 .atualidade {
@@ -213,6 +227,12 @@ main {
 /* LINKS PARA AS NOTÍCIAS */
 .outras_noticias a {
     text-decoration: none;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .outras_noticias a:hover {
@@ -288,7 +308,97 @@ main {
     height: 190px;
 }
 
+
 /* IMAGENS DAS NOTÍCIAS */
+
+/* MISSA DO PADROEIRO - 28.04.2023 */
+.padre28_04_2023{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+.alunos_na_missa1__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/aluna_na_missa.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.alunos_na_missa2__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/maos_de_aluno_na_missa.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.alunos_na_missa3__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/aluno_na_missa.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.missa1__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/missa1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.missa2__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/missa2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.missa3__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/missa3.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* DISCURSO DA DIREITORA PEDAGÓGICA FELICIDADE BUZI */
+.dp1__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/dp1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.dp2__28_04_2023 {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+
+    background: transparent url('../img/dp2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.cadernos12_05_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/cadernos1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
 .dp28_04_2023 {
     width: 100%;
     height: 100%;
@@ -301,7 +411,7 @@ main {
     width: 100%;
     height: 100%;
 
-    background: transparent url('../img/padre.jpg') no-repeat center center;
+    background: transparent url('../img/padre28_04_2023.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -311,4 +421,47 @@ main {
 
     background: transparent url('../img/maos_de_aluno_na_missa.jpg') no-repeat center center;
     background-size: cover;
+}
+
+.missa01_05_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/missa01_05_2023.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* VÍDEOS DAS NOTÍCIAS */
+.video {
+    margin-bottom: 10px;
+    max-width: 600px;
+    height: 600px;
+
+    overflow: hidden;
+}
+
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 640px) {
+    
+    .main_album > div {
+        margin: 10px;
+        width: 300px;
+        height: 150px;
+    }
+
+    .video {
+        height: 600px;
+        width: 100%;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+    }
+
 }

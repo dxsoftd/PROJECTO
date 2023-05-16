@@ -65,11 +65,11 @@ main strong {
     font-family: var(--font1);
 }
 
-main > p.fonte-informacao {
+main p.fonte-informacao {
     text-align: left;
 
     width: 100%;
-    padding: 5px;
+    padding: 0px;
     margin-bottom: 10px;
 
     color: #21A2BF;
@@ -131,6 +131,21 @@ main > p.fonte-informacao {
     width: 100%;
 }
 
+.album .header_album {
+    display: block;
+    width: 100%;
+}
+
+.album .main_album {
+    width: 100%;
+    margin: 0px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .album h2 {
     color: var(--cor_escura);
     font-family: var(--font1);
@@ -148,105 +163,6 @@ main > p.fonte-informacao {
 
     background-color: var(--cor_preta);
 }
-
-/* PARTE DA IMAGEM */
-
-/* MISSA DO PADROEIRO - 28.04.2023 */
-.padre28_04_2023{
-    margin-bottom: 10px;
-    width: 100%;
-    height: 200px;
-}
-
-.alunos_na_missa1__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/aluna_na_missa.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.alunos_na_missa2__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/maos_de_aluno_na_missa.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.alunos_na_missa3__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/aluno_na_missa.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.missa1__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/missa1.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.missa2__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/missa2.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.missa3__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/missa3.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-/* DISCURSO DA DIREITORA PEDAGÓGICA FELICIDADE BUZI */
-.dp1__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/dp1.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.dp2__28_04_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/dp2.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.cadernos12_05_2023 {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 10px;
-
-    background: transparent url('../img/cadernos1.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-/* VÍDEOS DAS NOTÍCIAS */
-video {
-    width: 100%;
-    height: 190px;
-    margin-bottom: 0px;
-}
-
 
 .outras_noticias > h2 {
     width: 100%;

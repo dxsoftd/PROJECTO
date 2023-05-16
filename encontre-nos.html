@@ -1,190 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPDDF / encontre-nos</title>
+  <title>Minha Loja Online</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Estilos CSS aqui */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
 
-    <!-- LINK PARA O HAMBURGUER -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- LINK PARA REDES SOCIAS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- LINK PARA FAVICON -->
-    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-    
-    <!-- LINK PARA ESTILOS -->
-    <link rel="stylesheet" href="estilos/inicio.css">
-    <link rel="stylesheet" href="encontre-nos.css">
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
+    .cart-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .cart-popup {
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      width: 200px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      display: none;
+    }
+
+    .cart-popup ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cart-popup li {
+      margin-bottom: 5px;
+    }
+
+    .request-products-button {
+      margin-top: 20px;
+      display: block;
+    }
+  </style>
 </head>
-<!--
-    o que meter no encontre-nos ?
+<body>
+  <header>
+    <div class="logo">Minha Loja</div>
+    <div class="cart-icon" onclick="showCartPopup()"><i class="fas fa-shopping-cart"></i></div>
+  </header>
 
-    Endereço físico: Inclua o endereço completo da sua empresa, incluindo o nome da rua, número do prédio e CEP. Isso é particularmente importante se você tem um local físico que as pessoas possam visitar.
+  <div class="cart-popup" id="cart-popup">
+    <ul id="cart-list"></ul>
+    <button class="request-products-button" onclick="sendEmail()">Solicitar Produtos</button>
+  </div>
 
-Mapa: Inclua um mapa interativo com a localização da sua insituição marcada. Isso ajudará os visitantes a visualizar onde você está localizado e como chegar lá.
+  <div class="products">
+    <div class="product">
+      <h3>Produto 1</h3>
+      <p>R$ 100,00</p>
+      <button onclick="addToCart(0)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <h3>Produto 2</h3>
+      <p>R$ 100,00</p>
+      <button onclick="addToCart(1)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <h3>Produto 3</h3>
+      <p>R$ 100,00</p>
+      <button onclick="addToCart(2)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <h3>Produto 4</h3>
+      <p>R$ 100,00</p>
+      <button onclick="addToCart(3)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product">
+      <h3>Produto 5</h3>
+      <p>R$ 100,00</p>
+      <button onclick="addToCart(4)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
 
-Número de telefone: Forneça um número de telefone para que as pessoas possam entrar em contato com você facilmente. Isso é especialmente importante se você oferece suporte ao cliente por telefone.
+        <script> document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+            { name: "Produto 1", price: 100 },
+            { name: "Produto 2", price: 100 },
+            { name: "Produto 3", price: 100 },
+            { name: "Produto 4", price: 100 },
+            { name: "Produto 5", price: 100 }
+            ];
 
-Endereço de e-mail: Inclua um endereço de e-mail para que os visitantes possam entrar em contato com você por e-mail, se preferirem.
+            const staticMemory = {
+            cart: [],
+            };
 
-Links para as redes sociais: Se sua empresa tem perfis nas redes sociais, inclua links para eles na página "Encontre-nos". Isso permite que os visitantes se conectem com você em outras plataformas.
+            function addToCart(index) {
+            const product = products[index];
+            staticMemory.cart.push(product);
+            console.log(`"${product.name}" foi adicionado ao carrinho.`);
+            console.log("Produtos no carrinho:", staticMemory.cart);
+            }
 
-Horário de funcionamento: Se você tem um horário específico de funcionamento, inclua-o na página "Encontre-nos". Isso permitirá que os visitantes saibam quando você está aberto e disponível para contatá-lo.
+            function showCartPopup() {
+            const cartPopup = document.getElementById("cart-popup");
+            cartPopup.style.display = "block";
+            
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = "";
 
-Formulário de contato: Inclua um formulário de contato em sua página "Encontre-nos" para permitir que os visitantes enviem mensagens diretamente para você. Certifique-se de incluir campos para o nome, endereço de e-mail e mensagem para que você possa responder adequadamente.
--->
-<body onresize="size()">
+            if (staticMemory.cart.length === 0) {
+                const emptyMessage = document.createElement("li");
+                emptyMessage.textContent = "Carrinho vazio";
+                cartList.appendChild(emptyMessage);
+            } else {
+                staticMemory.cart.forEach(product => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${product.name} - R$ ${product.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+                });
+            }
+            }
 
-    <!-- CABEÇALHO / HEADER -->
-    <header>
-        <div id="div1">
-            <img src="../img/logo.png" alt="logo">
-            <h1>Instituto Politécnico Dom Damião Franklin</h1>
-            <i id="iburger" class="material-icons" onclick="menu_openned()">menu</i>
-        </div>
-        <div id="div2">
-            <menu id="menu">
-                <ul>
-                    <li><a href="inicio.html">Início</a></li>
-                    <li><a href="instituição.html">Instituição</a></li>
-                    <li><a href="#">Corpo Docente</a></li>
-                    <li><a href="encontre-nos.html">Encontre-nos</a></li>
-                </ul>
-                <div class="container_button_menu">
-                    <button class="button_menu"><a href="login.html">registrar-se</a></button>
-                    <button class="button_menu"><a href="login2.html">Iniciar sessão</a></button>
-                </div>
-            </menu>
-        </div>
-    </header>
-    <!-- CORPO PRINCIPAL -->
-    <main>
-        <!--
-            ENCONTRE-NOS
-        -->
-        <section class="parte1">
-            <h2>Encontre-nos</h2>
-            <hr>
-            <p>Venha ao nosso encontro para  inscrever o seu filho para que possa cultivar valores e ajudá-lo com as competências atuais da sociedade.</p>
-        </section>
-        <section class="parte2">
-            <h2>Onde estamos ?</h2>
-            <hr>
-            <p>Avenida Pedro de Castro Van-Dúnem Loy, Palanca</p>
-        </section>
-        <section class="parte3">
-            <i class="bi bi-8-square"></i>
-            </i><h2></i> Localização</h2>
-            <hr>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.2518480532513!2d13.2822879!3d-8.8561295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f17ccf6bd1db%3A0xecc4d26652142421!2sInstituto%20Polit%C3%A9cnico%20Dom%20Dami%C3%A3o%20Franklin%20N%C2%BA8028!5e0!3m2!1spt-PT!2sao!4v1677795689976!5m2!1spt-PT!2sao" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p><b>DICA:</b>pode navegar pelo mapa arrastando o seu dedo ou o cursor dentro dele ou ampliando o mesmo.</p>
-        </section>
-        <section class="parte4">
-            <i class="bi bi-9-square"></i>
-            <h2>Endereços</h2>
-            <hr>
-            <p>Palanca - Viana</p>
-            <p>Luanda - Angola</p>
-        </section>
-        <section class="parte5">
-            <div class="bot">
-                <i class="bi bi-1-square"></i>
-            <i class="bi bi-0-square"></i>
-            </div>
-            <h2>Horários</h2>
-            <div class="calender">
-                <i class="bi bi-calendar-check"></i>
-            </div>
-            <hr>
-            <h3>Segundas - sextas</h3>
-            <p>08:00 - 17:45</p>
-            <h3>Sábados</h3>
-            <p>08:00 - 13:00</p>
-            <h3>Domingos e feriados</h3>
-            <p>Fechado</p>
-        </section>
-        <!--
-            <section class="parte6-2">
-            <h2></h2>
-            </section>
-        -->
-        <section class="parte7">
-            <div class="bot2">
-            <i class="bi bi-1-square"></i>
-            <i class="bi bi-1-square"></i>
-            </div>
-            <h2>Contactos / IPDDF</h2>
-            <i class="bi bi-question-square"></i>
-            <hr>
-            <h3>Unitel</h3>
-            <p>+244 949096404</p>
-            <h3>Movicel</h3>
-            <p>+244 992600465</p>
-        </section>
-    </main>
+            function sendEmail() {
+            const email = "mariomakondambuta@gmail.com";
+            const subject = "Solicitação de Produtos";
+            const body = staticMemory.cart.map(product => `${product.name} - R$ ${product.price.toFixed(2)}`).join("\n");
 
-    <!-- RODAPÉ / FOOTER -->
-    <footer>
-        <!-- INICIO -->
-        <div class="divp">
-            <h2>NOSSA ESCOLA</h2>
-            <ul>
-                <li><a href="quem_somos.html">Quem somos</a></li>
-                <li><a href="#classes-cursos">Nossos cursos</a></li>
-                <li><a href="corpo-docente.html">Corpo Docente</a></li>
-                <li><a href="instituição.html">Eventos IPDDF</a></li>
-            </ul>
-        </div>
-        <!-- FIM -->
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }
 
-        <!-- INICIO -->
-        <div class="divp">
-            <h2>OBTER AJUDA</h2>
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Horário escolar</a></li>
-                <li><a href="#">Proprinas</a></li>
-                <li><a href="#">Cursos e classes disponíveis</a></li>
-            </ul>
-        </div>
-        <!-- FIM -->
-
-        <!-- INICIO -->
-        <div class="divp">
-            <h2>MANTENHA-SE INFORMADO</h2>
-
-            <!-- INICIO -->
-            <div>
-                <form action="../banco de dados/banco_de_dados.php" method="post" autocomplete="on">
-                    <input type="email" name="mail" id="imail" placeholder="Digite o seu e-mail" autocomplete="email" required><br>
-                    <input type="submit" value="SUBSCREVER">
-                </form>
-            </div>
-            <!-- FIM -->
-
-            <!-- INICIO -->
-            <div class="medias-socias">
-                <a href="https://www.facebook.com/people/Instituto-Polit%C3%A9cnico-Dom-Dami%C3%A3o-Franklin-N%C2%BA-8028/100042176987092/" target="_blank"> <i class="fa fa-facebook"></i> </a>
-                <a href="https://www.instagram.com/institutopolitecnicodd/" target="_blank"> <i class="fa fa-instagram"></i> </a>
-                
-                <a href="tel:+244-992-600-465"> <i class="fa fa-phone"></i> </a>
-
-                <a href="https://whats.link/ipddf" target="_blank"> <i class="fa fa-whatsapp"></i> </a>
-
-                <a href="#" target="_blank"> <i class="fa-sharp fa-regular fa-envelope"></i> </a>
-            </div>
-            <!-- FIM -->
-        </div>
-        <!-- FIM -->
-        <article>
-            <br>
-            <p>2023 D(x)Soft | All Rigths Reserved</p>
-            <p>D(x)SOFT 2023 &copy </p>
-        </article>
-    </footer>
+            const productElements = document.querySelectorAll(".product");
+            productElements.forEach((productElement, index) => {
+            const addButton = document.createElement("button");
+            addButton.textContent = "Adicionar ao Carrinho";
+            addButton.addEventListener("click", () => {
+                var n1 = 1
+            })
+        })
+  </script>
 </body>
 </html>

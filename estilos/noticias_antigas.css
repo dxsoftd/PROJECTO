@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* IMPORTAÇÕES DE FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500&display=swap');
+
+@font-face {
+    font-family: 'jornal';
+    src: url(../fontes_de_letra/OldeEnglish.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+    --font2: 'Merriweather', serif;
+    --font3: 'jornal';
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+/* CONFIGURAÇÃO HTML */
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+/* MEU BODY */
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+body .nav ul a:nth-child(1) {
+    color: var(--cor_branca);
+}
+
+body .nav ul a:nth-child(2) {
+    color: #21A2BF;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 850px;
+    padding: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.main > a {
+    max-width: 380px;
+    height: 300px;
+    margin: 10px auto;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+}
+
+.main > a:hover {
+    text-decoration: none;
+}
+
+.noticia {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.noticia .sombra {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    background-image: linear-gradient(to top, var(--cor_preta), transparent);
+}
+
+.noticia .sombra h1 {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.noticia .sombra p {
+    text-indent: 0px;
+}
+
+footer {
+    background-color: transparent;
+}
+
+footer p {
+    color: rgb(107, 107, 107);
+}
+
+@media screen and (min-width: 1700px) {
+    .main {
+        width: 1600px;
+    }
+}
