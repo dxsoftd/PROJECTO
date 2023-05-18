@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../estilos/cantina.css">
     <link rel="stylesheet" href="../../estilos/bebidas.css">
 </head>
-<body id="body">
+<body onresize="size()" id="body">
     
     <header>
 
@@ -25,27 +25,12 @@
 
                 <ul>
                     <li><a href="inicio.html">CASA</a></li>
-                    <li><a href="instituição.html">INSTITUIÇÃO</a></li>
+                    <li><a href="../instituição.html">INSTITUIÇÃO</a></li>
                     <li><a href="corpo-docente.html">DOCENTES</a></li>
                     <li><a href="encontre-nos.html">ENCONTRE-NOS</a></li>
                     <li><a href="noticias.html">NOTÍCIAS</a></li>
                     <li><a href="secretaria.html">SECRETARIA</a></li>
                 </ul>
-
-                <div class="container_button_menu">
-                    <button class="button_menu" onclick="escolha_entrar()" onmouseenter="escolha_entrar()"> ENTRAR <i class="material-icons" id="icone_abrir" >expand_more</i> </button>
-
-                    
-                    <div class="escolha_entrar">
-
-                        <ul>
-                            <li>Criar conta</li>
-                            <li>Iniciar sessão</li>
-                        </ul>
-
-                    </div>
-
-                </div>
 
             </menu>
 
@@ -68,7 +53,8 @@
                         <li><a href="../sing_in.html">Home | DDF-SCHOOL</a></li>
                     </ul>
                 </div>
-                <div class="carrinho">
+
+                <div id="carrinho">
 
                 </div>
 
@@ -80,11 +66,15 @@
     </header>
 
     <main>
+
         <div class="titulo">
             <h2>bebidas</h2>
         </div>
+
         <div id="container_produtos">
+            
         </div>
+
     </main>
 
     <script src="../../animações/menu.js"></script>

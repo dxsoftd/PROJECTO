@@ -32,16 +32,3 @@ function menu_openned(){
         icone2.innerHTML = 'close'
     }
 }
-
-escolha_entrar.style.display = 'none'
-function escolha_entrar1() {
-    if(escolha_entrar.style.display == 'none'){
-        escolha_entrar.style.display = 'block'
-    }
-}
-
-function escolha_entrar2() {
-    if(escolha_entrar.style.display == 'none'){
-        escolha_entrar.style.display = 'block'
-    }
-}

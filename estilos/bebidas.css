@@ -139,9 +139,25 @@ img:nth-child(3),img:nth-child(4) {
     width: 100%;
     height: calc(100vh - 485px);
     margin-bottom: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    background-color: #0d0d0d;
+}
+
+.carrinho .produtos_do_card {
+    color: var(--cor_preta);
+    font-size: 12px;
+    font-family: var(--font1);
+}
+
+.carrinho hr {
+    height: 1px;
+    width: 90%;
+    color: var(--cor_preta);
+    background-color: var(--cor_preta);
 }
 

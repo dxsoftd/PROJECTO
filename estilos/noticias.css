@@ -168,7 +168,7 @@ main {
     width: 100%;
     height: 190px;
 
-    background: transparent url('../img/cadernos1.jpg') no-repeat center center;
+    background: transparent url('../img/18_05_2023_inicio_das_provas_de_professor/provas.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -429,6 +429,14 @@ main {
     height: 100%;
 
     background: transparent url('../img/missa01_05_2023.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.provas18_05_2023 {
+    width: 100%;
+    height: 100%;
+
+    background: transparent url('../img/18_05_2023_inicio_das_provas_de_professor/provas.jpg') no-repeat center center;
     background-size: cover;
 }
 
