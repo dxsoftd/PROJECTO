@@ -28,12 +28,25 @@
 
 /* PRIMEIRA SECTION - IMAGEM DE FUNDO DA INSTUIÇÃO */
 .back5 {
-    background: var(--cor_escura) url('../img/paisagem03.jpg') no-repeat center center fixed;
+    height: 500px;
+    width: 100%;
+
+    background: var(--cor_escura) url('../img/paisagem09.jpg') no-repeat center center fixed;
     background-size: cover;
-    padding: 170px 20px;
     text-align: center;
-    display: block;
-    position: inherit;
+}
+
+.sombra {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--cor_back2);
 }
 
 /*  ACESSÓRIOS DO MEU FUNDO DA INSTITUIÇÃO */
@@ -278,11 +291,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
         background-color: rgba(0, 0, 0, 0.598);
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
 
     #imagem_da_escola {
@@ -321,16 +332,15 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
         background-color: rgba(0, 0, 0, 0.598);
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
 
     .back6 {
-        width: 80%;
+        width: 90%;
         margin: auto;
+        overflow: hidden;
     }
 
     .back6 h3 {
@@ -374,11 +384,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding-bottom: 50px;
-        padding-left: 100px;
         background-color: rgba(0, 0, 0, 0.598);
         background-size: cover;
-        background-position: top center;
+        background-position: center center;
     }
 
     .back6 {

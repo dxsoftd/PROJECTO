@@ -77,7 +77,7 @@ main {
 }
 
 .main > a {
-    max-width: 380px;
+    width: 340px;
     height: 300px;
     margin: 10px auto;
 

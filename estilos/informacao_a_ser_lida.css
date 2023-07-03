@@ -92,7 +92,12 @@ main p.fonte-informacao {
 }
 
 .informacao .parte_do_texto .cabeca-noticia {
+    width: 100%;
     padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .informacao .parte_do_texto .cabeca-noticia h1 {
@@ -144,6 +149,10 @@ main p.fonte-informacao {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.album .main_album img {
+    max-width: 300px;
 }
 
 .album h2 {

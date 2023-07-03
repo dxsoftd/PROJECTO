@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+
+    <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid_container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px 200px 200px;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            /* grid-auto-rows: 500px; */
+        }
+
+        .grid_container div {
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        .grid_container div:nth-child(even) {
+            background-color: rgb(0, 102, 255);
+        }
+
+        .OLA {
+            background-color: #00000086;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="grid_container">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+
+    </div>
+</body>
+</html>

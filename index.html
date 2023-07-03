@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mariyoca - Sua Loja de Vendas</title>
+  <style>
+    /* Estilos CSS para a página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #232f3e;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 3px;
+      padding: 5px;
+      margin-right: 20px;
+    }
+
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      padding: 8px;
+      font-size: 14px;
+      width: 400px;
+    }
+
+    .search-bar input[type="submit"] {
+      background-color: #febd69;
+      color: #111;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .cart {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    nav {
+      background-color: #131921;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #37475a;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .category {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .category img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .category h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #37475a;
+    }
+
+    .category p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .slider-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .slide-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
+      pointer-events: none;
+    }
+
+    .slide-nav button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      pointer-events: all;
+    }
+
+    .slide-nav button:hover {
+      color: #febd69;
+    }
+
+    .slider::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+    background-color: #febd69;
+    border-radius: 4px;
+    }
+
+    .slider::-webkit-scrollbar-thumb:hover {
+    background-color: #c98b32;
+    }
+
+    .slider::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    }
+
+    footer {
+      background-color: #232f3e;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Media queries */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 20px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .category img {
+        max-height: 150px;
+      }
+
+      .category h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 16px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .category img {
+        max-height: 120px;
+      }
+
+      .category h3 {
+        font-size: 14px;
+      }
+    }
+
+     /* Estilos para o Footer */
+  footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #555;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-section {
+    flex-basis: 25%;
+    margin-bottom: 20px;
+    margin-right: 20px; /* Adicionado espaçamento entre as div */
+    text-align: left;
+  }
+
+  .footer-section:last-child {
+    margin-right: 0; /* Remove o espaçamento da última div */
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer-section ul li a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+
+  .social-media a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .social-media a:hover {
+    background-color: #333;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">Mariyoca</a>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar...">
+        <input type="submit" value="Buscar">
+      </div>
+      <a href="#" class="cart">Carrinho</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">Smartphones</a>
+    <a href="#">Pets</a>
+    <a href="#">Cozinha</a>
+    <a href="#">Família</a>
+    <a href="#">Moda</a>
+  </nav>
+
+  <main>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x400" alt="Banner 1">
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x400" alt="Banner 2">
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x400" alt="Banner 3">
+        </div>
+      </div>
+      <div class="slide-nav">
+        <button class="prev-slide">&#10094;</button>
+        <button class="next-slide">&#10095;</button>
+      </div>
+    </div>
+
+    <h2>Produtos por Categoria</h2>
+
+    <div class="category-grid"> <div class="category-grid">
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Acessórios de Games">
+            <h3>Acessórios de Games</h3>
+            <p>Descrição da categoria de Acessórios de Games.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Acessórios de Pets">
+            <h3>Acessórios de Pets</h3>
+            <p>Descrição da categoria de Acessórios de Pets.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Casa">
+            <h3>Casa</h3>
+            <p>Descrição da categoria de Casa.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Eletrônicos">
+            <h3>Eletrônicos</h3>
+            <p>Descrição da categoria de Eletrônicos.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Saúde">
+            <h3>Saúde</h3>
+            <p>Descrição da categoria de Saúde.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Brinquedos">
+            <h3>Brinquedos</h3>
+            <p>Descrição da categoria de Brinquedos.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Fitness">
+            <h3>Fitness</h3>
+            <p>Descrição da categoria de Fitness.</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="https://via.placeholder.com/250x200" alt="Moda">
+            <h3>Moda</h3>
+            <p>Descrição da categoria de Moda.</p>
+          </div>
+        </a>
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Sobre Nós</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p>Telefone: (123) 456-7890</p>
+        <p>Email: info@mariyoca.com</p>
+        <p>Endereço: 1234 Rua Principal, Cidade, Estado</p>
+      </div>
+      <div class="footer-section">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="#">Acessórios de Games</a></li>
+          <li><a href="#">Acessórios de Pets</a></li>
+          <li><a href="#">Casa</a></li>
+          <li><a href="#">Eletrônicos</a></li>
+          <li><a href="#">Saúde</a></li>
+          <li><a href="#">Brinquedos</a></li>
+          <li><a href="#">Fitness</a></li>
+          <li><a href="#">Moda</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Siga-nos</h4>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Mariyoca - Sua Loja de Vendas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    const slider = document.querySelector('.slider');
+    const prevSlideButton = document.querySelector('.prev-slide');
+    const nextSlideButton = document.querySelector('.next-slide');
+    
+    let scrollPos = 0;
+    const slideWidth = slider.offsetWidth;
+    const slideCount = slider.querySelectorAll('.slide').length;
+    
+    function nextSlide() {
+      slider.scrollLeft += slideWidth;
+      checkSlidePosition();
+    }
+    
+    function prevSlide() {
+      slider.scrollLeft -= slideWidth;
+      checkSlidePosition();
+    }
+    
+    function checkSlidePosition() {
+      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }
+    
+    nextSlideButton.addEventListener('click', nextSlide);
+    prevSlideButton.addEventListener('click', prevSlide);
+    
+    setInterval(nextSlide, 3000); // Trocar para o próximo slide a cada 3 segundos
+  </script>
+  
+
+</body>
+</html>

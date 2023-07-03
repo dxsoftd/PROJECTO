@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    
+    <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+
+            background-image: linear-gradient(to top, red, black);
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            padding: 10px;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+        }
+
+        .calc {
+            height: 450px;
+            width: 300px;
+            padding: 10px;
+            
+            background-color: black;
+
+            border-radius: 9px;
+        }
+
+        .calc h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .calc .result {
+            width: 100%;
+            height: 40px;
+
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .calc .btns {
+            width: 100%;
+            margin-top: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .calc .btns div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+
+            height: 60px;
+            width: 60px;
+            margin: 5px;
+
+            border-radius: 2px;
+
+            background-color: rgba(128, 128, 128, 0.397);
+        }
+
+        .calc .btns .zero {
+
+        }
+
+        .calc .btns .igual {
+            width: 60px;
+            height: 120px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Mário Makondambuta</h1>
+    </header>
+    <section>
+        <div class="calc">
+            <div class="title">
+                <h2>Calculadora</h2>
+            </div>
+            <div class="result">
+
+            </div>
+            <div class="btns">
+                <div class="limpar">C</div>
+                <div class="menor">></div>
+                <div class="divisao">/</div>
+                <div class="multiplicar">X</div>
+                <div class="sete">7</div>
+                <div class="oito">8</div>
+                <div class="nove">9</div>
+                <div class="subtracao">-</div>
+                <div class="quatro">4</div>
+                <div class="cinco">5</div>
+                <div class="seis">6</div>
+                <div class="adicao">+</div>
+                <div class="um">1</div>
+                <div class="dois">2</div>
+                <div class="tres">3</div>
+                <div class="igual">=</div>
+                <div class="zero">0</div>
+                <div class="ponto">.</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

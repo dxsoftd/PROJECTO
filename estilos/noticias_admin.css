@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500&display=swap');
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--cor_media) url('../img/paisagem09.jpg') no-repeat center center;
+    background-size: cover;
+
+    animation: images 10s ease-in infinite alternate;
+}
+
+.background .sombra {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.308);
+}
+
+.background .sombra .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    transition: all .3s ease-in;
+}
+
+.background .sombra .container .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+
+    transition: all .3s ease-in;
+}
+
+.background .sombra .container .login .header_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.background .sombra .container .login .header_login h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--cor_media);
+}
+
+.background .sombra .container .login .main_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    margin-top: 40px;
+    padding: 10px;
+
+    background-color: var(--cor_branca);
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px var(--cor_back1);
+
+    transition: all .3s ease-in;
+}
+
+.background .sombra .container .login .main_login .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+}
+
+.background .sombra .container .login .main_login .title img {
+    width: 80px;
+    height: 80px;
+}
+
+.background .sombra .container .login .main_login .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 40%;
+    width: 100%;
+}
+
+.background .sombra .container .login .main_login .form > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.background .sombra .container .login .main_login .form .input_pass input {
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid  black;
+}
+
+.background .sombra .container .login .main_login .form .submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 91%;
+}
+
+.background .sombra .container .login .main_login .form .submit input {
+    width: 47%;
+    padding: 4px;
+
+    border: none;
+    outline: none;
+    
+    cursor: pointer;
+}
+
+.background .sombra .container .login .main_login .form .submit input:nth-child(1) {
+    background-color: rgba(128, 128, 128, 0.205);
+}
+
+.background .sombra .container .login .main_login .form .submit input:nth-child(1):hover {
+    background-color: rgba(128, 128, 128, 0.301);
+}
+
+.background .sombra .container .login .main_login .form .submit input:nth-child(2) {
+    background-color: var(--cor_media);
+}
+
+.background .sombra .container .login .main_login .form .submit input:nth-child(2):hover {
+    background-color: var(--cor_escura);
+}
+
+.background .sombra .container .login .main_login .form .submit input {
+    box-shadow: 0px 0px 10px var(--cor_back);
+}
+
+.background .sombra .container .login .main_login .footer {
+    height: 20%;
+    width: 100%;
+}
+
+.background .sombra .container .login .main_login .footer p {
+    text-align: center;
+    color: var(--cor_preta);
+}
+
+.background .sombra .container .img {
+    display: none;
+}
+
+@keyframes images {
+    
+    0% {
+        background-image: url('../img/paisagem07.jpg');
+    }
+
+    45% {
+        background-image: url('../img/paisagem08.jpg');
+    }
+    
+    75% {
+        background-image: url('../img/paisagem09.jpg');
+    }
+
+}

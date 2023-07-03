@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500&display=swap');
+
+/* MINHA RAÍZ / CASA DAS VARIÁVEIS */
+:root {
+
+    /* FONTES */
+    --font1: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+    /* CORES */
+    --cor_escura: #f2a341;
+    --cor_media: #f2b138;
+    --cor_clara: #f2bb13;
+    --cor_preta: #0d0d0d;
+    --cor_branca: white;
+    --cor_azul: #0f4e8a;
+    --cor_azul_fraco: #7C8AA6;
+    --cor_creme: #F2F2F2;
+    --cor_castanho_fraco: #BFB7A8;
+    --cor_vinho_fraco: #A67B77;
+    --cor_back1: rgba(0, 0, 0, 0.479);
+    --cor_back2: rgba(0, 0, 0, 0.555);
+
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px calc(100vh - 100px) 50px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px;
+    grid-auto-rows: 100%;
+    grid-gap: 10px;
+
+    height: 50px;
+    width: 100%;
+
+    background-color: var(--cor_branca);
+
+    border-bottom: 1px solid var(--cor_preta);
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.burger {
+    background-color: var(--cor_media);
+}
+
+.burger i {
+    font-size: 30px;
+    color: var(--cor_azul);
+}
+
+.logo {
+    justify-content: flex-start;
+}
+
+.logo h1 {
+    color: var(--cor_azul);
+}
+
+.log_out a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-decoration: none;
+    
+    background-color: var(--cor_azul);
+
+    height: 35px;
+    min-width: 80px;
+    padding: 1px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.log_out a button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+    border: none;
+
+    height: 30px;
+    width: 100%;
+
+    color: var(--cor_azul);
+    background-color: var(--cor_media);
+
+    border-radius: 3px;
+}
+
+.log_out a:hover button {
+    height: 31px;
+}
+
+.log_out a:active button {
+    height: 33px;
+}
+
+
+
+main {
+    width: 100%;
+
+    background-color: rgb(243, 243, 243);
+}
+
+main .dados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .dados .container_dados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px var(--cor_back2);
+    /* border: 1px solid black; */
+    background-color: var(--cor_branca);
+
+    overflow: hidden;
+}
+
+main .dados .container_dados > div {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+main .dados .container_dados .txt_dados {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .dados .container_dados .txt_dados .number {
+    font-size: 50px;
+    color: var(--cor_azul);
+}
+
+main .dados .container_dados .img_dados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: var(--cor_media);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    overflow: hidden;
+}
+
+footer .ferramentas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100%;
+    width: 100%;
+}
+
+footer .ferramentas i {
+    font-size: 26px;
+    color: var(--cor_branca);
+}
